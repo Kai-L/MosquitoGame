@@ -46,18 +46,40 @@ public class MosquitoControl : MonoBehaviour {
 
         // Forward Movement Controls
 
+        Vector3 tempVel = transform.InverseTransformDirection(GetComponent<Rigidbody>().velocity);
+
         if (Input.GetAxis("Vertical") > 0)
         {
-            GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * forwardMoveSpeed * Time.deltaTime);
+            //GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * forwardMoveSpeed * Time.deltaTime);
+            tempVel.z = forwardMoveSpeed;
         }
         else if (Input.GetAxis("Vertical") < 0)
         {
-            GetComponent<Rigidbody>().AddRelativeForce(-Vector3.forward * (forwardMoveSpeed/2) * Time.deltaTime);
+            //GetComponent<Rigidbody>().AddRelativeForce(-Vector3.forward * (forwardMoveSpeed/2) * Time.deltaTime);
+            tempVel.z = -forwardMoveSpeed;
         }
         else
         {
             // TO-DO: Decelerate
+            tempVel.z = Mathf.Lerp(tempVel.z, 0, deceleration);
             //GetComponent<Rigidbody>().AddRelativeForce(-Vector3.forward);
         }
+
+        // Strafe Movement Controls
+
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            tempVel.x = strafeMoveSpeed;
+        }
+        else if(Input.GetAxis("Horizontal") < 0)
+        {
+            tempVel.x = -strafeMoveSpeed;
+        }
+        else
+        {
+            tempVel.x = Mathf.Lerp(tempVel.x, 0, deceleration);
+        }
+
+        GetComponent<Rigidbody>().velocity = transform.TransformDirection(tempVel);
 	}
 }
