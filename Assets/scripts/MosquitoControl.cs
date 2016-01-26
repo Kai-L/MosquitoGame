@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class MosquitoControl : MonoBehaviour {
+public class MosquitoControl : NetworkBehaviour {
+
+	[Header("Player Select")]
+	public int player;
 
     [Header("Speed Controls")]
     public float flightSpeed;
@@ -17,12 +21,29 @@ public class MosquitoControl : MonoBehaviour {
     public float xAxis;
     public float yAxis;
 
+	GameObject mainCamera;
+
+	void Start(){
+		mainCamera = this.gameObject.transform.FindChild ("Main Camera").gameObject;
+	}
+
 	void OnMouseDown()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+	public override void OnStartLocalPlayer()
+	{
+		GetComponent<MeshRenderer> ().material.color = Color.red;
+	}
+
 	void Update () {
+
+		if (!isLocalPlayer) 
+		{
+			Destroy (mainCamera);
+			return;
+		}
 
         xAxis += -Input.GetAxis("ViewHorizontal") * hRotationSpeed * Time.deltaTime;
         yAxis += Input.GetAxis("ViewVertical") * vRotationSpeed * Time.deltaTime;
