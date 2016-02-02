@@ -11,19 +11,12 @@ public class NetworkPlayerChoice : MonoBehaviour {
 
 	public void SetCharacter(int i)
 	{
-		GetComponent<NetworkManager> ().playerPrefab = characters [i];
+		GetComponent<GuiLobbyManager> ().playerPrefab = characters [i];
 		currentI = i;
 	}
 
 	void Update()
 	{
-		if (GetComponent<NetworkManager> ().isNetworkActive && !hasSwapped) {
-			if (currentI == 0) {
-				SetCharacter (1);
-			} else {
-				SetCharacter (0);
-			}
-			hasSwapped = true;
-		}
+		
 	}
 }

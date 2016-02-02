@@ -23,6 +23,11 @@ public class MosquitoControl : NetworkBehaviour {
 
 	GameObject mainCamera;
 
+	public override float GetNetworkSendInterval ()
+	{
+		return 0;
+	}
+
 	void Start(){
 		mainCamera = this.gameObject.transform.FindChild ("Main Camera").gameObject;
 	}
@@ -43,6 +48,10 @@ public class MosquitoControl : NetworkBehaviour {
 		{
 			Destroy (mainCamera);
 			return;
+		}
+
+		if (Input.GetKey (KeyCode.LeftShift)) {
+			Cursor.lockState = CursorLockMode.None;
 		}
 
         xAxis += -Input.GetAxis("ViewHorizontal") * hRotationSpeed * Time.deltaTime;

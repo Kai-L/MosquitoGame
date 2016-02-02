@@ -43,6 +43,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+		public override float GetNetworkSendInterval ()
+		{
+			return 0;
+		}
+
         // Use this for initialization
         private void Start()
 		{
@@ -66,6 +71,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			{
 				Destroy (m_Camera);
 				return;
+			}
+
+			if (Input.GetKey (KeyCode.LeftShift)) {
+				Cursor.lockState = CursorLockMode.None;
+			} else {
+				Cursor.lockState = CursorLockMode.Locked;
 			}
 
             RotateView();
@@ -101,6 +112,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
+			if(!isLocalPlayer){
+				Destroy (m_Camera);
+				return;
+			}
+
             float speed;
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
@@ -137,7 +153,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             ProgressStepCycle(speed);
             //UpdateCameraPosition(speed);
 
-            m_MouseLook.UpdateCursorLock();
+            //m_MouseLook.UpdateCursorLock();
         }
 
 
