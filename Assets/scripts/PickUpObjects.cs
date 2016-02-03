@@ -43,17 +43,18 @@ public class PickUpObjects : MonoBehaviour {
 	void Update () {
 		Debug.Log (GetMouseHoverObject (5));
 
-		if (Input.GetMouseButtonDown(1)){
-			TryGrabObject(GetMouseHoverObject(5));
-			//grab = true;
-		}
-		else if (Input.GetMouseButtonDown(0)){
-			DropObject();
-		}
+		if (gameObject.tag == "pickable") {
+			if (Input.GetMouseButtonDown (1)) {
+				TryGrabObject (GetMouseHoverObject (5));
+				//grab = true;
+			} else if (Input.GetMouseButtonDown (0)) {
+				DropObject ();
+			}
 			
-		if (grabbedObject != null) {
-			Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * grabbedObjectSize;
-			grabbedObject.transform.position = newPosition;
+			if (grabbedObject != null) {
+				Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * grabbedObjectSize;
+				grabbedObject.transform.position = newPosition;
+			}
 		}
 
 	}
