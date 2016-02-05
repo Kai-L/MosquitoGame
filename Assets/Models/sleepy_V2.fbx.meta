@@ -1,0 +1,489 @@
+fileFormatVersion: 2
+guid: 994b9678196e446f6b101e31a237febb
+timeCreated: 1454702864
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: body
+    100002: head
+    100004: L_arm
+    100006: L_arm 1
+    100008: L_clavicle
+    100010: L_elbow
+    100012: L_elbowSphere
+    100014: L_leg
+    100016: L_lower
+    100018: L_lowerArm
+    100020: L_upperArm
+    100022: L_wrist
+    100024: R_arm
+    100026: R_arm 1
+    100028: R_clavicle
+    100030: R_elbow
+    100032: R_elbowSphere
+    100034: R_leg
+    100036: R_lowerArm
+    100038: R_upperArm
+    100040: R_wrist
+    100042: Rl_lower
+    100044: root
+    100046: Sleepy
+    100048: //RootNode
+    100050: spine1
+    100052: spine2
+    400000: body
+    400002: head
+    400004: L_arm
+    400006: L_arm 1
+    400008: L_clavicle
+    400010: L_elbow
+    400012: L_elbowSphere
+    400014: L_leg
+    400016: L_lower
+    400018: L_lowerArm
+    400020: L_upperArm
+    400022: L_wrist
+    400024: R_arm
+    400026: R_arm 1
+    400028: R_clavicle
+    400030: R_elbow
+    400032: R_elbowSphere
+    400034: R_leg
+    400036: R_lowerArm
+    400038: R_upperArm
+    400040: R_wrist
+    400042: Rl_lower
+    400044: root
+    400046: Sleepy
+    400048: //RootNode
+    400050: spine1
+    400052: spine2
+    2300000: body
+    2300002: head
+    2300004: L_elbowSphere
+    2300006: L_leg
+    2300008: L_lowerArm
+    2300010: L_upperArm
+    2300012: R_elbowSphere
+    2300014: R_leg
+    2300016: R_lowerArm
+    2300018: R_upperArm
+    3300000: body
+    3300002: head
+    3300004: L_elbowSphere
+    3300006: L_leg
+    3300008: L_lowerArm
+    3300010: L_upperArm
+    3300012: R_elbowSphere
+    3300014: R_leg
+    3300016: R_lowerArm
+    3300018: R_upperArm
+    4300000: L_leg
+    4300002: R_leg
+    4300004: head
+    4300006: body
+    4300008: R_upperArm
+    4300010: R_lowerArm
+    4300012: R_elbowSphere
+    4300014: L_upperArm
+    4300016: L_elbowSphere
+    4300018: L_lowerArm
+    7400000: Idle
+    7400002: R_handSwat
+    7400004: L_handSwat
+    7400006: B_handSwat
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 9
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/spine1
+        weight: 1
+      - path: root/spine1/spine2
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle/L_arm 1
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle/L_arm 1/L_elbow
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle/L_arm 1/L_elbow/L_wrist
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle/R_arm 1
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle/R_arm 1/R_elbow
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle/R_arm 1/R_elbow/R_wrist
+        weight: 1
+      - path: Sleepy
+        weight: 1
+      - path: Sleepy/body
+        weight: 1
+      - path: Sleepy/head
+        weight: 1
+      - path: Sleepy/L_arm
+        weight: 1
+      - path: Sleepy/L_arm/L_lower
+        weight: 1
+      - path: Sleepy/L_arm/L_lower/L_elbowSphere
+        weight: 1
+      - path: Sleepy/L_arm/L_lower/L_lowerArm
+        weight: 1
+      - path: Sleepy/L_arm/L_upperArm
+        weight: 1
+      - path: Sleepy/L_leg
+        weight: 1
+      - path: Sleepy/R_arm
+        weight: 1
+      - path: Sleepy/R_arm/R_upperArm
+        weight: 1
+      - path: Sleepy/R_arm/Rl_lower
+        weight: 1
+      - path: Sleepy/R_arm/Rl_lower/R_elbowSphere
+        weight: 1
+      - path: Sleepy/R_arm/Rl_lower/R_lowerArm
+        weight: 1
+      - path: Sleepy/R_leg
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: R_handSwat
+      takeName: Take 001
+      firstFrame: 20
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/spine1
+        weight: 1
+      - path: root/spine1/spine2
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle/L_arm 1
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle/L_arm 1/L_elbow
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle/L_arm 1/L_elbow/L_wrist
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle/R_arm 1
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle/R_arm 1/R_elbow
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle/R_arm 1/R_elbow/R_wrist
+        weight: 1
+      - path: Sleepy
+        weight: 1
+      - path: Sleepy/body
+        weight: 1
+      - path: Sleepy/head
+        weight: 1
+      - path: Sleepy/L_arm
+        weight: 1
+      - path: Sleepy/L_arm/L_lower
+        weight: 1
+      - path: Sleepy/L_arm/L_lower/L_elbowSphere
+        weight: 1
+      - path: Sleepy/L_arm/L_lower/L_lowerArm
+        weight: 1
+      - path: Sleepy/L_arm/L_upperArm
+        weight: 1
+      - path: Sleepy/L_leg
+        weight: 1
+      - path: Sleepy/R_arm
+        weight: 1
+      - path: Sleepy/R_arm/R_upperArm
+        weight: 1
+      - path: Sleepy/R_arm/Rl_lower
+        weight: 1
+      - path: Sleepy/R_arm/Rl_lower/R_elbowSphere
+        weight: 1
+      - path: Sleepy/R_arm/Rl_lower/R_lowerArm
+        weight: 1
+      - path: Sleepy/R_leg
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: L_handSwat
+      takeName: Take 001
+      firstFrame: 40
+      lastFrame: 55
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/spine1
+        weight: 1
+      - path: root/spine1/spine2
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle/L_arm 1
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle/L_arm 1/L_elbow
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle/L_arm 1/L_elbow/L_wrist
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle/R_arm 1
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle/R_arm 1/R_elbow
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle/R_arm 1/R_elbow/R_wrist
+        weight: 1
+      - path: Sleepy
+        weight: 1
+      - path: Sleepy/body
+        weight: 1
+      - path: Sleepy/head
+        weight: 1
+      - path: Sleepy/L_arm
+        weight: 1
+      - path: Sleepy/L_arm/L_lower
+        weight: 1
+      - path: Sleepy/L_arm/L_lower/L_elbowSphere
+        weight: 1
+      - path: Sleepy/L_arm/L_lower/L_lowerArm
+        weight: 1
+      - path: Sleepy/L_arm/L_upperArm
+        weight: 1
+      - path: Sleepy/L_leg
+        weight: 1
+      - path: Sleepy/R_arm
+        weight: 1
+      - path: Sleepy/R_arm/R_upperArm
+        weight: 1
+      - path: Sleepy/R_arm/Rl_lower
+        weight: 1
+      - path: Sleepy/R_arm/Rl_lower/R_elbowSphere
+        weight: 1
+      - path: Sleepy/R_arm/Rl_lower/R_lowerArm
+        weight: 1
+      - path: Sleepy/R_leg
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: B_handSwat
+      takeName: Take 001
+      firstFrame: 60
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/spine1
+        weight: 1
+      - path: root/spine1/spine2
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle/L_arm 1
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle/L_arm 1/L_elbow
+        weight: 1
+      - path: root/spine1/spine2/L_clavicle/L_arm 1/L_elbow/L_wrist
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle/R_arm 1
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle/R_arm 1/R_elbow
+        weight: 1
+      - path: root/spine1/spine2/R_clavicle/R_arm 1/R_elbow/R_wrist
+        weight: 1
+      - path: Sleepy
+        weight: 1
+      - path: Sleepy/body
+        weight: 1
+      - path: Sleepy/head
+        weight: 1
+      - path: Sleepy/L_arm
+        weight: 1
+      - path: Sleepy/L_arm/L_lower
+        weight: 1
+      - path: Sleepy/L_arm/L_lower/L_elbowSphere
+        weight: 1
+      - path: Sleepy/L_arm/L_lower/L_lowerArm
+        weight: 1
+      - path: Sleepy/L_arm/L_upperArm
+        weight: 1
+      - path: Sleepy/L_leg
+        weight: 1
+      - path: Sleepy/R_arm
+        weight: 1
+      - path: Sleepy/R_arm/R_upperArm
+        weight: 1
+      - path: Sleepy/R_arm/Rl_lower
+        weight: 1
+      - path: Sleepy/R_arm/Rl_lower/R_elbowSphere
+        weight: 1
+      - path: Sleepy/R_arm/Rl_lower/R_lowerArm
+        weight: 1
+      - path: Sleepy/R_leg
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 16
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
