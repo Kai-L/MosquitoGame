@@ -23,7 +23,7 @@ public class MosquitoControl : NetworkBehaviour {
 
 	GameObject mainCamera;
 
-	public override float GetNetworkSendInterval ()
+    public override float GetNetworkSendInterval ()
 	{
 		return 0;
 	}
@@ -63,7 +63,10 @@ public class MosquitoControl : NetworkBehaviour {
 
         if (Input.GetMouseButtonDown(currentFlap))
         {
-            GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * flightSpeed);
+            SetFastMovement();
+
+            GetComponent<Rigidbody>().AddForce(Vector3.up * flightSpeed);
+
             if (currentFlap == 0)
             {
                 currentFlap = 1;
@@ -73,6 +76,10 @@ public class MosquitoControl : NetworkBehaviour {
                 currentFlap = 0;
             }
         }
+
+        Vector3 tempSpeed = GetComponent<Rigidbody>().velocity;
+        tempSpeed.y = Mathf.Clamp(tempSpeed.y, -flightSpeed, flightSpeed/2);
+        GetComponent<Rigidbody>().velocity = tempSpeed;
 
         // Forward Movement Controls
 
@@ -90,7 +97,7 @@ public class MosquitoControl : NetworkBehaviour {
         }
         else
         {
-            // TO-DO: Decelerate
+            tempVel.x = Mathf.Lerp(tempVel.x, 0, deceleration);
             tempVel.z = Mathf.Lerp(tempVel.z, 0, deceleration);
             //GetComponent<Rigidbody>().AddRelativeForce(-Vector3.forward);
         }
@@ -107,9 +114,33 @@ public class MosquitoControl : NetworkBehaviour {
         }
         else
         {
+            tempVel.z = Mathf.Lerp(tempVel.z, 0, deceleration);
             tempVel.x = Mathf.Lerp(tempVel.x, 0, deceleration);
         }
 
         GetComponent<Rigidbody>().velocity = transform.TransformDirection(tempVel);
 	}
+
+    void OnCollisionEnter(Collision c)
+    {
+        if (c.gameObject != this.gameObject && c.gameObject.tag != "Ceiling")
+        {
+            SetSlowMovement();
+            Vector3 tempVec = GetComponent<Rigidbody>().velocity;
+            tempVec = Vector3.Lerp(tempVec, Vector3.zero, deceleration);
+            GetComponent<Rigidbody>().velocity = tempVec;
+        }
+    }
+
+    void SetFastMovement()
+    {
+        strafeMoveSpeed = 15;
+        forwardMoveSpeed = 15;
+    }
+
+    void SetSlowMovement()
+    {
+        strafeMoveSpeed = 1;
+        forwardMoveSpeed = 1; 
+    }
 }
