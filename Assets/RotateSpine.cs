@@ -6,11 +6,12 @@ public class RotateSpine : MonoBehaviour {
     public Transform head;
     public float rotateSpeed = 1;
 
-	void Update () {
+	void Update () 
+	{
 
-        Quaternion tempRot = transform.localRotation;
+        Quaternion tempRot = transform.rotation;
         tempRot.x = Mathf.Lerp(tempRot.x, head.localRotation.x, rotateSpeed);
-        transform.localRotation = tempRot;
+        transform.rotation = tempRot;
 
 	}
 }

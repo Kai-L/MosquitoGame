@@ -75,13 +75,13 @@ public class SleepyMovement : MonoBehaviour {
         }
         else
         {
-            tempVel.x = Mathf.Lerp(tempVel.x, 0, deceleration);
-            tempVel.z = Mathf.Lerp(tempVel.z, 0, deceleration);
+            //tempVel.x = Mathf.Lerp(tempVel.x, 0, deceleration);
+            //tempVel.z = Mathf.Lerp(tempVel.z, 0, deceleration);
             //GetComponent<Rigidbody>().AddRelativeForce(-Vector3.forward);
         }
 
         // Strafe Movement Controls
-
+		/*
         if (Input.GetAxis("Horizontal") > 0)
         {
             tempVel.x = strafeMoveSpeed;
@@ -95,14 +95,15 @@ public class SleepyMovement : MonoBehaviour {
             tempVel.z = Mathf.Lerp(tempVel.z, 0, deceleration);
             tempVel.x = Mathf.Lerp(tempVel.x, 0, deceleration);
         }
+        */
 
         if(leftKnee.velocity.magnitude < rightKnee.velocity.magnitude)
         {
-            leftKnee.velocity = transform.TransformVector(tempVel);
+			leftKnee.velocity = transform.InverseTransformVector (tempVel);
         }
         else
         {
-            rightKnee.velocity = transform.TransformVector(tempVel);
+            rightKnee.velocity = transform.InverseTransformVector(tempVel);
         }
         //GetComponent<Rigidbody>().velocity = transform.TransformDirection(tempVel);
     }
