@@ -1,61 +1,61 @@
 fileFormatVersion: 2
-guid: 4ebda36fc6c5a463b8bb49794de00e8c
-timeCreated: 1455145069
+guid: cf60401c4a1a041828aeefc4a5016df3
+timeCreated: 1455220117
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Bezel
-    100002: pCube1
-    100004: pCube2
-    100006: pCube3
-    100008: pCylinder1
-    100010: Stand
-    100012: //RootNode
-    100014: base
-    100016: frame
-    100018: neck
-    100020: screen
-    100022: widget
-    400000: Bezel
-    400002: pCube1
-    400004: pCube2
-    400006: pCube3
-    400008: pCylinder1
-    400010: Stand
-    400012: //RootNode
-    400014: base
-    400016: frame
-    400018: neck
-    400020: screen
-    400022: widget
-    2300000: pCube1
-    2300002: pCube2
-    2300004: pCube3
-    2300006: pCylinder1
-    2300008: base
-    2300010: frame
-    2300012: neck
-    2300014: screen
-    2300016: widget
-    3300000: pCube1
-    3300002: pCube2
-    3300004: pCube3
-    3300006: pCylinder1
-    3300008: base
-    3300010: frame
-    3300012: neck
-    3300014: screen
-    3300016: widget
-    4300000: pCube2
-    4300002: pCylinder1
-    4300004: pCube1
-    4300006: pCube3
-    4300008: base
-    4300010: neck
-    4300012: frame
-    4300014: widget
-    4300016: screen
+    100000: Bracket
+    100002: Bracket1
+    100004: Bracket2
+    100006: Bracket3
+    100008: Bracket_Group
+    100010: //RootNode
+    100012: Cushion
+    100014: Cushion_Down_Left
+    100016: Cushion_Down_RIght
+    100018: Cushion_Up_Left
+    100020: Cushion_Up_Right
+    100022: Loveseat_Base
+    400000: Bracket
+    400002: Bracket1
+    400004: Bracket2
+    400006: Bracket3
+    400008: Bracket_Group
+    400010: //RootNode
+    400012: Cushion
+    400014: Cushion_Down_Left
+    400016: Cushion_Down_RIght
+    400018: Cushion_Up_Left
+    400020: Cushion_Up_Right
+    400022: Loveseat_Base
+    2300000: Bracket
+    2300002: Bracket1
+    2300004: Bracket2
+    2300006: Bracket3
+    2300008: Cushion_Down_Left
+    2300010: Cushion_Down_RIght
+    2300012: Cushion_Up_Left
+    2300014: Cushion_Up_Right
+    2300016: Loveseat_Base
+    3300000: Bracket
+    3300002: Bracket1
+    3300004: Bracket2
+    3300006: Bracket3
+    3300008: Cushion_Down_Left
+    3300010: Cushion_Down_RIght
+    3300012: Cushion_Up_Left
+    3300014: Cushion_Up_Right
+    3300016: Loveseat_Base
+    4300000: Loveseat_Base
+    4300002: Cushion_Down_RIght
+    4300004: Cushion_Down_Left
+    4300006: Cushion_Up_Right
+    4300008: Cushion_Up_Left
+    4300010: Bracket
+    4300012: Bracket1
+    4300014: Bracket2
+    4300016: Bracket3
     9500000: //RootNode
   materials:
     importMaterials: 1

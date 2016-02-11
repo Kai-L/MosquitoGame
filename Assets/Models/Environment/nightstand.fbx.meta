@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: 8f28e2993eb714dd3b6c6f57e8e363b6
+timeCreated: 1455220116
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: frame
+    100002: //RootNode
+    100004: nightstand_01
+    100006: nightstand_010
+    100008: nightstand_02
+    100010: nightstand_03
+    100012: nightstand_04
+    100014: nightstand_06
+    100016: nightstand_07
+    100018: nightstand_08
+    100020: nightstand_09
+    100022: nightstand_10
+    100024: storage
+    100026: storage_01
+    100028: storage_02
+    100030: storage_03
+    100032: storage_04
+    100034: storage_05
+    100036: storage_handle
+    400000: frame
+    400002: //RootNode
+    400004: nightstand_01
+    400006: nightstand_010
+    400008: nightstand_02
+    400010: nightstand_03
+    400012: nightstand_04
+    400014: nightstand_06
+    400016: nightstand_07
+    400018: nightstand_08
+    400020: nightstand_09
+    400022: nightstand_10
+    400024: storage
+    400026: storage_01
+    400028: storage_02
+    400030: storage_03
+    400032: storage_04
+    400034: storage_05
+    400036: storage_handle
+    2300000: nightstand_01
+    2300002: nightstand_010
+    2300004: nightstand_02
+    2300006: nightstand_03
+    2300008: nightstand_04
+    2300010: nightstand_06
+    2300012: nightstand_07
+    2300014: nightstand_08
+    2300016: nightstand_09
+    2300018: nightstand_10
+    2300020: storage_01
+    2300022: storage_02
+    2300024: storage_03
+    2300026: storage_04
+    2300028: storage_05
+    2300030: storage_handle
+    3300000: nightstand_01
+    3300002: nightstand_010
+    3300004: nightstand_02
+    3300006: nightstand_03
+    3300008: nightstand_04
+    3300010: nightstand_06
+    3300012: nightstand_07
+    3300014: nightstand_08
+    3300016: nightstand_09
+    3300018: nightstand_10
+    3300020: storage_01
+    3300022: storage_02
+    3300024: storage_03
+    3300026: storage_04
+    3300028: storage_05
+    3300030: storage_handle
+    4300000: nightstand_10
+    4300002: nightstand_09
+    4300004: nightstand_08
+    4300006: nightstand_07
+    4300008: nightstand_06
+    4300010: nightstand_04
+    4300012: nightstand_03
+    4300014: nightstand_02
+    4300016: nightstand_01
+    4300018: nightstand_010
+    4300020: storage_01
+    4300022: storage_02
+    4300024: storage_03
+    4300026: storage_04
+    4300028: storage_05
+    4300030: storage_handle
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
