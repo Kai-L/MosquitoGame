@@ -10,7 +10,7 @@ public class RotateSpine : MonoBehaviour {
 	{
 
         Quaternion tempRot = transform.rotation;
-        tempRot.x = Mathf.Lerp(tempRot.x, head.localRotation.x, rotateSpeed);
+		tempRot.y = Mathf.Lerp(tempRot.y, head.rotation.x, rotateSpeed);
         transform.rotation = tempRot;
 
 	}

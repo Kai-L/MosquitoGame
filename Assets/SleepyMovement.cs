@@ -12,11 +12,13 @@ public class SleepyMovement : MonoBehaviour {
     [Header("Body Parts")]
     public Rigidbody leftHand;
     public Rigidbody rightHand;
-    public Rigidbody leftKnee;
-    public Rigidbody rightKnee;
+	public Transform leftHandOrigin;
+	public Transform rightHandOrigin;
+	public Transform swatPoint;
+	public Rigidbody torso;
 
-    public Vector3 targetLPos;
-    public Vector3 targetRPos;
+	float tempForwardSpeed = 0;
+	float tempStrafeSpeed = 0;
     
     void Start()
     {
@@ -25,86 +27,68 @@ public class SleepyMovement : MonoBehaviour {
 
     void Update () {
 
-        if (!Input.anyKey)
-        {
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
-        }
+		/*
+		Debug.Log (torso.velocity);
 
         if (Input.GetKey(KeyCode.Q))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if(Physics.Raycast(ray, out hit))
-            {
-                targetLPos = hit.point;
-                leftHand.AddForce((targetLPos - leftHand.position) * handSpeed * Time.smoothDeltaTime);
-            }
+			leftHand.AddRelativeForce (new Vector3 (0, 0, handSpeed));
+			//leftHand.rotation = Quaternion.RotateTowards(leftHand.rotation, Quaternion.Euler(0, 90, 0), handSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.E))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                targetRPos = hit.point;
-                rightHand.AddForce((targetRPos - rightHand.position) * handSpeed * Time.smoothDeltaTime);
-            }
+			rightHand.AddRelativeForce (new Vector3 (0, 0, handSpeed));
+			//rightHand.rotation = Quaternion.RotateTowards (rightHand.rotation, Quaternion.Euler (0, 90, 0), handSpeed * Time.deltaTime);
         }
-        if(!Input.GetKey(KeyCode.E) && !Input.GetKey(KeyCode.Q))
+		if(!Input.GetKey(KeyCode.E))
         {
-            leftHand.AddForce((Vector3.zero - leftHand.position) * handSpeed * Time.smoothDeltaTime);
-            rightHand.AddForce((Vector3.zero - rightHand.position) * handSpeed * Time.smoothDeltaTime);
+			leftHand.velocity = Vector3.Lerp(leftHand.velocity, Vector3.zero, handSpeed);
+
+			//leftHand.rotation = Quaternion.RotateTowards(leftHand.rotation, Quaternion.Euler(0, 0, 0), handSpeed * Time.deltaTime);
         }
+		if (!Input.GetKey (KeyCode.Q)) 
+		{
+			rightHand.velocity = Vector3.Lerp(rightHand.velocity, Vector3.zero, handSpeed);
+
+			//ightHand.rotation = Quaternion.RotateTowards (rightHand.rotation, Quaternion.Euler (0, 0, 0), handSpeed * Time.deltaTime);
+		}
+		*/
 
 
         // Forward Movement Controls
 
-        Vector3 tempVel = transform.InverseTransformDirection(GetComponent<Rigidbody>().velocity);
 
         if (Input.GetAxis("Vertical") > 0)
         {
-            //GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * forwardMoveSpeed * Time.deltaTime);
-            tempVel.z = forwardMoveSpeed;
+			tempForwardSpeed = forwardMoveSpeed;
         }
         else if (Input.GetAxis("Vertical") < 0)
         {
-            //GetComponent<Rigidbody>().AddRelativeForce(-Vector3.forward * (forwardMoveSpeed/2) * Time.deltaTime);
-            tempVel.z = -forwardMoveSpeed;
+			tempForwardSpeed = -forwardMoveSpeed;
+
         }
         else
         {
-            //tempVel.x = Mathf.Lerp(tempVel.x, 0, deceleration);
-            //tempVel.z = Mathf.Lerp(tempVel.z, 0, deceleration);
-            //GetComponent<Rigidbody>().AddRelativeForce(-Vector3.forward);
+			tempForwardSpeed = Mathf.Lerp (tempForwardSpeed, 0, .1f);
         }
 
         // Strafe Movement Controls
-		/*
+
         if (Input.GetAxis("Horizontal") > 0)
         {
-            tempVel.x = strafeMoveSpeed;
+			tempStrafeSpeed = strafeMoveSpeed;
         }
         else if (Input.GetAxis("Horizontal") < 0)
         {
-            tempVel.x = -strafeMoveSpeed;
+			tempStrafeSpeed = -strafeMoveSpeed;
         }
         else
         {
-            tempVel.z = Mathf.Lerp(tempVel.z, 0, deceleration);
-            tempVel.x = Mathf.Lerp(tempVel.x, 0, deceleration);
+			tempStrafeSpeed = Mathf.Lerp(tempStrafeSpeed, 0, .1f);
         }
-        */
 
-        if(leftKnee.velocity.magnitude < rightKnee.velocity.magnitude)
-        {
-			leftKnee.velocity = transform.InverseTransformVector (tempVel);
-        }
-        else
-        {
-            rightKnee.velocity = transform.InverseTransformVector(tempVel);
-        }
-        //GetComponent<Rigidbody>().velocity = transform.TransformDirection(tempVel);
+		torso.position += transform.forward * tempForwardSpeed * Time.deltaTime;
+		torso.position += transform.up * tempStrafeSpeed * Time.deltaTime; 
+        
     }
 }
