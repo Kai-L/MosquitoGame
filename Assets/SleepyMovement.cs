@@ -69,7 +69,7 @@ public class SleepyMovement : MonoBehaviour {
         }
         else
         {
-			tempForwardSpeed = Mathf.Lerp (tempForwardSpeed, 0, .1f);
+			tempForwardSpeed = Mathf.Lerp (tempForwardSpeed, 0, deceleration);
         }
 
         // Strafe Movement Controls
@@ -84,7 +84,7 @@ public class SleepyMovement : MonoBehaviour {
         }
         else
         {
-			tempStrafeSpeed = Mathf.Lerp(tempStrafeSpeed, 0, .1f);
+			tempStrafeSpeed = Mathf.Lerp(tempStrafeSpeed, 0, deceleration);
         }
 
 		torso.position += transform.forward * tempForwardSpeed * Time.deltaTime;

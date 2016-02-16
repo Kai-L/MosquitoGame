@@ -11,17 +11,17 @@ public class SleepySwat : MonoBehaviour {
             if (Input.GetKeyDown("q"))
             {
                 Debug.Log("Playing Left Hand Swat Animation");
-                GetComponent<Animation>().Play("L_handSwat");
+				anim.CrossFade("L_handSwat", 0.5f, PlayMode.StopAll);
             }
             if (Input.GetKeyDown("e"))
             {
                 Debug.Log("Playing Right Hand Swat Animation");
-                GetComponent<Animation>().Play("R_handSwat");
+				anim.CrossFade("R_handSwat", 0.5f, PlayMode.StopAll);
             }
             if (Input.GetKeyDown("q") && Input.GetKeyDown("e"))
             {
                 Debug.Log("Playing Both Hand Swat Animation");
-                GetComponent<Animation>().Play("B_handSwat");
+				anim.CrossFade("B_swat", 0.5f, PlayMode.StopAll);
             }
         }
 

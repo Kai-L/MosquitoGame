@@ -11,6 +11,9 @@ public class RotateHead : MonoBehaviour {
 
 	public Camera mainCam;
 
+	public Transform leftClavicle;
+	public Transform rightClavicle;
+
     void Start () {
 		mainCam = Camera.main;
 	}
@@ -23,5 +26,9 @@ public class RotateHead : MonoBehaviour {
         transform.eulerAngles = new Vector3(0, yAxis, 270);
 
 		mainCam.transform.eulerAngles = new Vector3 (xAxis, yAxis, 0);
+
+		//leftClavicle.eulerAngles = new Vector3 (xAxis /2, 0, 0);
+
+		//rightClavicle.eulerAngles = new Vector3 (-xAxis /2, 0, 0);
     }
 }
