@@ -1,12 +1,18 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class SleepySwat : MonoBehaviour {
+public class SleepySwat : NetworkBehaviour {
 
 	public Animation anim;
+	public NetworkIdentity networkIdentity;
     
 	void Update() {
-        if (GetComponent<Animation>().isPlaying == false)
+		if (!networkIdentity.isLocalPlayer) {
+			return;
+		}
+
+        if (anim.isPlaying == false)
         {
             if (Input.GetKeyDown("q"))
             {

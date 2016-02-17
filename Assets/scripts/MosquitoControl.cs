@@ -136,11 +136,15 @@ public class MosquitoControl : NetworkBehaviour {
     {
         strafeMoveSpeed = 15;
         forwardMoveSpeed = 15;
+		GetComponent<Rigidbody> ().useGravity = true;
+		GetComponent<Rigidbody> ().drag = 0;
     }
 
     void SetSlowMovement()
     {
         strafeMoveSpeed = 1;
-        forwardMoveSpeed = 1; 
+        forwardMoveSpeed = 1;
+		GetComponent<Rigidbody> ().useGravity = false;
+		GetComponent<Rigidbody> ().drag = 1;
     }
 }

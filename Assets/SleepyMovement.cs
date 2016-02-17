@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class SleepyMovement : MonoBehaviour {
+public class SleepyMovement : NetworkBehaviour {
+
+	public Camera mainCamera;
+	public NetworkIdentity networkIdentity;
 
     [Header("Speed Controls")]
     public float forwardMoveSpeed;
@@ -26,6 +30,11 @@ public class SleepyMovement : MonoBehaviour {
     }
 
     void Update () {
+
+		if (!networkIdentity.isLocalPlayer) {
+			Destroy (mainCamera);
+			return;
+		}
 
 		/*
 		Debug.Log (torso.velocity);
