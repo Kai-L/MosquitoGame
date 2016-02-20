@@ -52,6 +52,13 @@ ModelImporter:
     4300008: Leg2
     4300010: Leg3
     4300012: Plane
+    6400000: Leg
+    6400002: Leg1
+    6400004: Leg2
+    6400006: Leg3
+    6400008: pCube1
+    6400010: pCube2
+    6400012: Plane
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -79,7 +86,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 100
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

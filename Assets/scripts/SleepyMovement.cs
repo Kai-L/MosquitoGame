@@ -36,7 +36,7 @@ public class SleepyMovement : NetworkBehaviour {
 			return;
 		}
 
-		/*
+        /*
 		Debug.Log (torso.velocity);
 
         if (Input.GetKey(KeyCode.Q))
@@ -65,8 +65,7 @@ public class SleepyMovement : NetworkBehaviour {
 
 
         // Forward Movement Controls
-
-
+        Debug.Log("Vertical axis: " + Input.GetAxis("Vertical"));
         if (Input.GetAxis("Vertical") > 0)
         {
 			tempForwardSpeed = forwardMoveSpeed;
@@ -78,11 +77,12 @@ public class SleepyMovement : NetworkBehaviour {
         }
         else
         {
-			tempForwardSpeed = Mathf.Lerp (tempForwardSpeed, 0, deceleration);
+            tempForwardSpeed = 0;
+			//tempForwardSpeed = Mathf.Lerp (tempForwardSpeed, 0, deceleration);
         }
 
         // Strafe Movement Controls
-
+        Debug.Log("Horizonal axis: " + Input.GetAxis("Horizontal"));
         if (Input.GetAxis("Horizontal") > 0)
         {
 			tempStrafeSpeed = strafeMoveSpeed;
@@ -93,11 +93,19 @@ public class SleepyMovement : NetworkBehaviour {
         }
         else
         {
-			tempStrafeSpeed = Mathf.Lerp(tempStrafeSpeed, 0, deceleration);
+            tempStrafeSpeed = 0;
+			//tempStrafeSpeed = Mathf.Lerp(tempStrafeSpeed, 0, deceleration);
+        }
+
+        if(tempStrafeSpeed == 0 && tempForwardSpeed == 0)
+        {
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
 
 		torso.position += transform.forward * tempForwardSpeed * Time.deltaTime;
-		torso.position += transform.up * tempStrafeSpeed * Time.deltaTime; 
+		torso.position += transform.up * tempStrafeSpeed * Time.deltaTime;
+
+        Debug.Log("Velocity: " + GetComponent<Rigidbody>().velocity);
         
     }
 }

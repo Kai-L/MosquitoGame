@@ -56,6 +56,15 @@ ModelImporter:
     4300012: Bracket1
     4300014: Bracket2
     4300016: Bracket3
+    6400000: Bracket
+    6400002: Bracket1
+    6400004: Bracket2
+    6400006: Bracket3
+    6400008: Cushion_Down_Left
+    6400010: Cushion_Down_RIght
+    6400012: Cushion_Up_Left
+    6400014: Cushion_Up_Right
+    6400016: Loveseat_Base
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -83,7 +92,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 100
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

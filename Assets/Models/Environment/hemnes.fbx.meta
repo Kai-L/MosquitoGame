@@ -277,6 +277,54 @@ ModelImporter:
     4300090: Hemnes_03
     4300092: Hemnes_02
     4300094: Hemnes_01
+    6400000: Hemnes_01
+    6400002: Hemnes_02
+    6400004: Hemnes_03
+    6400006: Hemnes_04
+    6400008: Hemnes_05
+    6400010: Hemnes_06
+    6400012: Hemnes_07
+    6400014: Hemnes_08
+    6400016: Hemnes_09
+    6400018: Hemnes_10
+    6400020: Hemnes_11
+    6400022: Hemnes_12
+    6400024: polySurface1
+    6400026: polySurface10
+    6400028: polySurface11
+    6400030: polySurface12
+    6400032: polySurface13
+    6400034: polySurface14
+    6400036: polySurface15
+    6400038: polySurface16
+    6400040: polySurface17
+    6400042: polySurface18
+    6400044: polySurface19
+    6400046: polySurface2
+    6400048: polySurface20
+    6400050: polySurface21
+    6400052: polySurface22
+    6400054: polySurface23
+    6400056: polySurface24
+    6400058: polySurface25
+    6400060: polySurface26
+    6400062: polySurface27
+    6400064: polySurface28
+    6400066: polySurface29
+    6400068: polySurface3
+    6400070: polySurface30
+    6400072: polySurface31
+    6400074: polySurface32
+    6400076: polySurface33
+    6400078: polySurface34
+    6400080: polySurface35
+    6400082: polySurface36
+    6400084: polySurface4
+    6400086: polySurface5
+    6400088: polySurface6
+    6400090: polySurface7
+    6400092: polySurface8
+    6400094: polySurface9
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -304,7 +352,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 100
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
