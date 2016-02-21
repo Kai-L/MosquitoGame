@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: ec05070907dd14324b8c816d2c378fec
+timeCreated: 1456016189
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: counter_bottom
+    100004: counter_main
+    100006: counter_top
+    100008: drawer
+    100010: drawer01
+    100012: drawer02
+    100014: drawer03
+    100016: drawer04
+    100018: drawer05
+    100020: drawer06
+    100022: pCylinder10
+    100024: pCylinder11
+    100026: pCylinder12
+    100028: pCylinder7
+    100030: pCylinder8
+    100032: pCylinder9
+    100034: polySurface29
+    100036: polySurface35
+    100038: polySurface37
+    100040: polySurface38
+    100042: polySurface39
+    100044: polySurface40
+    400000: //RootNode
+    400002: counter_bottom
+    400004: counter_main
+    400006: counter_top
+    400008: drawer
+    400010: drawer01
+    400012: drawer02
+    400014: drawer03
+    400016: drawer04
+    400018: drawer05
+    400020: drawer06
+    400022: pCylinder10
+    400024: pCylinder11
+    400026: pCylinder12
+    400028: pCylinder7
+    400030: pCylinder8
+    400032: pCylinder9
+    400034: polySurface29
+    400036: polySurface35
+    400038: polySurface37
+    400040: polySurface38
+    400042: polySurface39
+    400044: polySurface40
+    2300000: counter_bottom
+    2300002: counter_main
+    2300004: counter_top
+    2300006: pCylinder10
+    2300008: pCylinder11
+    2300010: pCylinder12
+    2300012: pCylinder7
+    2300014: pCylinder8
+    2300016: pCylinder9
+    2300018: polySurface29
+    2300020: polySurface35
+    2300022: polySurface37
+    2300024: polySurface38
+    2300026: polySurface39
+    2300028: polySurface40
+    3300000: counter_bottom
+    3300002: counter_main
+    3300004: counter_top
+    3300006: pCylinder10
+    3300008: pCylinder11
+    3300010: pCylinder12
+    3300012: pCylinder7
+    3300014: pCylinder8
+    3300016: pCylinder9
+    3300018: polySurface29
+    3300020: polySurface35
+    3300022: polySurface37
+    3300024: polySurface38
+    3300026: polySurface39
+    3300028: polySurface40
+    4300000: counter_bottom
+    4300002: counter_main
+    4300004: counter_top
+    4300006: polySurface39
+    4300008: pCylinder12
+    4300010: polySurface38
+    4300012: pCylinder9
+    4300014: polySurface37
+    4300016: pCylinder11
+    4300018: polySurface40
+    4300020: pCylinder8
+    4300022: polySurface35
+    4300024: pCylinder10
+    4300026: polySurface29
+    4300028: pCylinder7
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

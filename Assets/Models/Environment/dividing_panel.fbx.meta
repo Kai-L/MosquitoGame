@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: bdb847a8f9fac4c6e8c7bedf8fc95ff7
+timeCreated: 1456016188
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Dividers
+    100002: Dividers 1
+    100004: Dividers 2
+    100006: Horizontal_Dividers
+    100008: Horizontal_Dividers 1
+    100010: Horizontal_Dividers 2
+    100012: //RootNode
+    100014: RisorPanel_1
+    100016: RisorPanel_2
+    100018: RisorPanel_3
+    100020: Translucent_Panels
+    100022: Translucent_Panels 1
+    100024: Translucent_Panels 2
+    100026: Trim
+    100028: Trim 1
+    100030: Trim 2
+    100032: Vertical_Dividers
+    100034: Vertical_Dividers 1
+    100036: Vertical_Dividers 2
+    400000: Dividers
+    400002: Dividers 1
+    400004: Dividers 2
+    400006: Horizontal_Dividers
+    400008: Horizontal_Dividers 1
+    400010: Horizontal_Dividers 2
+    400012: //RootNode
+    400014: RisorPanel_1
+    400016: RisorPanel_2
+    400018: RisorPanel_3
+    400020: Translucent_Panels
+    400022: Translucent_Panels 1
+    400024: Translucent_Panels 2
+    400026: Trim
+    400028: Trim 1
+    400030: Trim 2
+    400032: Vertical_Dividers
+    400034: Vertical_Dividers 1
+    400036: Vertical_Dividers 2
+    2300000: Horizontal_Dividers
+    2300002: Horizontal_Dividers 1
+    2300004: Horizontal_Dividers 2
+    2300006: Translucent_Panels
+    2300008: Translucent_Panels 1
+    2300010: Translucent_Panels 2
+    2300012: Trim
+    2300014: Trim 1
+    2300016: Trim 2
+    2300018: Vertical_Dividers
+    2300020: Vertical_Dividers 1
+    2300022: Vertical_Dividers 2
+    3300000: Horizontal_Dividers
+    3300002: Horizontal_Dividers 1
+    3300004: Horizontal_Dividers 2
+    3300006: Translucent_Panels
+    3300008: Translucent_Panels 1
+    3300010: Translucent_Panels 2
+    3300012: Trim
+    3300014: Trim 1
+    3300016: Trim 2
+    3300018: Vertical_Dividers
+    3300020: Vertical_Dividers 1
+    3300022: Vertical_Dividers 2
+    4300000: Trim
+    4300002: Translucent_Panels
+    4300004: Horizontal_Dividers
+    4300006: Vertical_Dividers
+    4300008: Trim
+    4300010: Translucent_Panels
+    4300012: Horizontal_Dividers
+    4300014: Vertical_Dividers
+    4300016: Trim
+    4300018: Translucent_Panels
+    4300020: Horizontal_Dividers
+    4300022: Vertical_Dividers
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 150
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
