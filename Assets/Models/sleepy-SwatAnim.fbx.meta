@@ -1,0 +1,517 @@
+fileFormatVersion: 2
+guid: 3fe5973b403b24c849ed2711917260e7
+timeCreated: 1456251905
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Body
+    100002: body
+    100004: Chest
+    100006: Head
+    100008: Head 1
+    100010: Head 2
+    100012: Head1
+    100014: L_arm
+    100016: L_ear
+    100018: L_leg
+    100020: left
+    100022: Left_Ankle
+    100024: Left_Elbow
+    100026: Left_Feet
+    100028: Left_Feet_Toes
+    100030: Left_hand
+    100032: Left_Knee
+    100034: Left_Sholder
+    100036: Left_Thigh
+    100038: Left_Wrist
+    100040: Main
+    100042: Neck
+    100044: Neck_01
+    100046: Nose
+    100048: R_arm
+    100050: R_ear
+    100052: R_leg
+    100054: Right_Ankle
+    100056: Right_Elbow
+    100058: Right_Feet
+    100060: Right_Feet_Toes
+    100062: Right_hand
+    100064: Right_Knee
+    100066: Right_Sholder
+    100068: Right_Thigh
+    100070: Right_Wrist
+    100072: Root
+    100074: Short
+    100076: Sleepy
+    100078: //RootNode
+    100080: Spine
+    100082: Wrist
+    400000: Body
+    400002: body
+    400004: Chest
+    400006: Head
+    400008: Head 1
+    400010: Head 2
+    400012: Head1
+    400014: L_arm
+    400016: L_ear
+    400018: L_leg
+    400020: left
+    400022: Left_Ankle
+    400024: Left_Elbow
+    400026: Left_Feet
+    400028: Left_Feet_Toes
+    400030: Left_hand
+    400032: Left_Knee
+    400034: Left_Sholder
+    400036: Left_Thigh
+    400038: Left_Wrist
+    400040: Main
+    400042: Neck
+    400044: Neck_01
+    400046: Nose
+    400048: R_arm
+    400050: R_ear
+    400052: R_leg
+    400054: Right_Ankle
+    400056: Right_Elbow
+    400058: Right_Feet
+    400060: Right_Feet_Toes
+    400062: Right_hand
+    400064: Right_Knee
+    400066: Right_Sholder
+    400068: Right_Thigh
+    400070: Right_Wrist
+    400072: Root
+    400074: Short
+    400076: Sleepy
+    400078: //RootNode
+    400080: Spine
+    400082: Wrist
+    4300000: R_leg
+    4300002: L_leg
+    4300004: R_arm
+    4300006: L_arm
+    4300008: Short
+    4300010: body
+    4300012: Nose
+    4300014: Head
+    4300016: L_ear
+    4300018: R_ear
+    4300020: Head1
+    7400000: Swat_Left
+    7400002: Swat_Right
+    7400004: Swat_Both
+    9500000: //RootNode
+    13700000: body
+    13700002: Head 1
+    13700004: Head1
+    13700006: L_arm
+    13700008: L_ear
+    13700010: L_leg
+    13700012: Nose
+    13700014: R_arm
+    13700016: R_ear
+    13700018: R_leg
+    13700020: Short
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Swat_Left
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 17
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Main
+        weight: 1
+      - path: Main/Root
+        weight: 1
+      - path: Main/Root/Left_Thigh
+        weight: 1
+      - path: Main/Root/Left_Thigh/Left_Knee
+        weight: 1
+      - path: Main/Root/Left_Thigh/Left_Knee/Left_Ankle
+        weight: 1
+      - path: Main/Root/Left_Thigh/Left_Knee/Left_Ankle/Left_Feet
+        weight: 1
+      - path: Main/Root/Left_Thigh/Left_Knee/Left_Ankle/Left_Feet/Left_Feet_Toes
+        weight: 1
+      - path: Main/Root/Right_Thigh
+        weight: 1
+      - path: Main/Root/Right_Thigh/Right_Knee
+        weight: 1
+      - path: Main/Root/Right_Thigh/Right_Knee/Right_Ankle
+        weight: 1
+      - path: Main/Root/Right_Thigh/Right_Knee/Right_Ankle/Right_Feet
+        weight: 1
+      - path: Main/Root/Right_Thigh/Right_Knee/Right_Ankle/Right_Feet/Right_Feet_Toes
+        weight: 1
+      - path: Main/Root/Wrist
+        weight: 1
+      - path: Main/Root/Wrist/Spine
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Left_Sholder
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Left_Sholder/Left_Elbow
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Left_Sholder/Left_Elbow/Left_Wrist
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Left_Sholder/Left_Elbow/Left_Wrist/Left_hand
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Neck
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Neck/Neck_01
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Neck/Neck_01/Head 2
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Right_Sholder
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Right_Sholder/Right_Elbow
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Right_Sholder/Right_Elbow/Right_Wrist
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Right_Sholder/Right_Elbow/Right_Wrist/Right_hand
+        weight: 1
+      - path: Sleepy
+        weight: 1
+      - path: Sleepy/Body
+        weight: 1
+      - path: Sleepy/Body/body
+        weight: 1
+      - path: Sleepy/Body/Short
+        weight: 1
+      - path: Sleepy/Head
+        weight: 1
+      - path: Sleepy/Head/Head 1
+        weight: 1
+      - path: Sleepy/Head/Head1
+        weight: 1
+      - path: Sleepy/Head/L_ear
+        weight: 1
+      - path: Sleepy/Head/Nose
+        weight: 1
+      - path: Sleepy/Head/R_ear
+        weight: 1
+      - path: Sleepy/L_arm
+        weight: 1
+      - path: Sleepy/L_leg
+        weight: 1
+      - path: Sleepy/R_arm
+        weight: 1
+      - path: Sleepy/R_leg
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Swat_Right
+      takeName: Take 001
+      firstFrame: 17
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Main
+        weight: 1
+      - path: Main/Root
+        weight: 1
+      - path: Main/Root/Left_Thigh
+        weight: 1
+      - path: Main/Root/Left_Thigh/Left_Knee
+        weight: 1
+      - path: Main/Root/Left_Thigh/Left_Knee/Left_Ankle
+        weight: 1
+      - path: Main/Root/Left_Thigh/Left_Knee/Left_Ankle/Left_Feet
+        weight: 1
+      - path: Main/Root/Left_Thigh/Left_Knee/Left_Ankle/Left_Feet/Left_Feet_Toes
+        weight: 1
+      - path: Main/Root/Right_Thigh
+        weight: 1
+      - path: Main/Root/Right_Thigh/Right_Knee
+        weight: 1
+      - path: Main/Root/Right_Thigh/Right_Knee/Right_Ankle
+        weight: 1
+      - path: Main/Root/Right_Thigh/Right_Knee/Right_Ankle/Right_Feet
+        weight: 1
+      - path: Main/Root/Right_Thigh/Right_Knee/Right_Ankle/Right_Feet/Right_Feet_Toes
+        weight: 1
+      - path: Main/Root/Wrist
+        weight: 1
+      - path: Main/Root/Wrist/Spine
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Left_Sholder
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Left_Sholder/Left_Elbow
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Left_Sholder/Left_Elbow/Left_Wrist
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Left_Sholder/Left_Elbow/Left_Wrist/Left_hand
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Neck
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Neck/Neck_01
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Neck/Neck_01/Head 2
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Right_Sholder
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Right_Sholder/Right_Elbow
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Right_Sholder/Right_Elbow/Right_Wrist
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Right_Sholder/Right_Elbow/Right_Wrist/Right_hand
+        weight: 1
+      - path: Sleepy
+        weight: 1
+      - path: Sleepy/Body
+        weight: 1
+      - path: Sleepy/Body/body
+        weight: 1
+      - path: Sleepy/Body/Short
+        weight: 1
+      - path: Sleepy/Head
+        weight: 1
+      - path: Sleepy/Head/Head 1
+        weight: 1
+      - path: Sleepy/Head/Head1
+        weight: 1
+      - path: Sleepy/Head/L_ear
+        weight: 1
+      - path: Sleepy/Head/Nose
+        weight: 1
+      - path: Sleepy/Head/R_ear
+        weight: 1
+      - path: Sleepy/L_arm
+        weight: 1
+      - path: Sleepy/L_leg
+        weight: 1
+      - path: Sleepy/R_arm
+        weight: 1
+      - path: Sleepy/R_leg
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Swat_Both
+      takeName: Take 001
+      firstFrame: 34
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Main
+        weight: 1
+      - path: Main/Root
+        weight: 1
+      - path: Main/Root/Left_Thigh
+        weight: 1
+      - path: Main/Root/Left_Thigh/Left_Knee
+        weight: 1
+      - path: Main/Root/Left_Thigh/Left_Knee/Left_Ankle
+        weight: 1
+      - path: Main/Root/Left_Thigh/Left_Knee/Left_Ankle/Left_Feet
+        weight: 1
+      - path: Main/Root/Left_Thigh/Left_Knee/Left_Ankle/Left_Feet/Left_Feet_Toes
+        weight: 1
+      - path: Main/Root/Right_Thigh
+        weight: 1
+      - path: Main/Root/Right_Thigh/Right_Knee
+        weight: 1
+      - path: Main/Root/Right_Thigh/Right_Knee/Right_Ankle
+        weight: 1
+      - path: Main/Root/Right_Thigh/Right_Knee/Right_Ankle/Right_Feet
+        weight: 1
+      - path: Main/Root/Right_Thigh/Right_Knee/Right_Ankle/Right_Feet/Right_Feet_Toes
+        weight: 1
+      - path: Main/Root/Wrist
+        weight: 1
+      - path: Main/Root/Wrist/Spine
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Left_Sholder
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Left_Sholder/Left_Elbow
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Left_Sholder/Left_Elbow/Left_Wrist
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Left_Sholder/Left_Elbow/Left_Wrist/Left_hand
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Neck
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Neck/Neck_01
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Neck/Neck_01/Head 2
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Right_Sholder
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Right_Sholder/Right_Elbow
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Right_Sholder/Right_Elbow/Right_Wrist
+        weight: 1
+      - path: Main/Root/Wrist/Spine/Chest/Right_Sholder/Right_Elbow/Right_Wrist/Right_hand
+        weight: 1
+      - path: Sleepy
+        weight: 1
+      - path: Sleepy/Body
+        weight: 1
+      - path: Sleepy/Body/body
+        weight: 1
+      - path: Sleepy/Body/Short
+        weight: 1
+      - path: Sleepy/Head
+        weight: 1
+      - path: Sleepy/Head/Head 1
+        weight: 1
+      - path: Sleepy/Head/Head1
+        weight: 1
+      - path: Sleepy/Head/L_ear
+        weight: 1
+      - path: Sleepy/Head/Nose
+        weight: 1
+      - path: Sleepy/Head/R_ear
+        weight: 1
+      - path: Sleepy/L_arm
+        weight: 1
+      - path: Sleepy/L_leg
+        weight: 1
+      - path: Sleepy/R_arm
+        weight: 1
+      - path: Sleepy/R_leg
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 350
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
