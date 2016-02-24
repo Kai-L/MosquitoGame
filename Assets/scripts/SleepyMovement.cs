@@ -34,12 +34,12 @@ public class SleepyMovement : MonoBehaviour {
 
     void Update () {
 
-		/*
+
 		if (!networkIdentity.isLocalPlayer) {
 			Destroy (mainCamera);
 			return;
 		}
-		*/
+
 
         /*
 		Debug.Log (torso.velocity);
