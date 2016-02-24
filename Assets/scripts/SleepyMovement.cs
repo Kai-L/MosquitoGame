@@ -19,7 +19,9 @@ public class SleepyMovement : MonoBehaviour {
 	public Transform leftHandOrigin;
 	public Transform rightHandOrigin;
 	public Transform swatPoint;
-	public Rigidbody torso;
+	public Transform torso;
+
+	CharacterController character;
 
 	float tempForwardSpeed = 0;
 	float tempStrafeSpeed = 0;
@@ -27,6 +29,7 @@ public class SleepyMovement : MonoBehaviour {
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+		character = GetComponent<CharacterController> ();
     }
 
     void Update () {
@@ -101,13 +104,17 @@ public class SleepyMovement : MonoBehaviour {
 
         if(tempStrafeSpeed == 0 && tempForwardSpeed == 0)
         {
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            //GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
 
-		torso.position += transform.forward * tempForwardSpeed * Time.deltaTime;
-		torso.position += transform.right * tempStrafeSpeed * Time.deltaTime;
+		character.Move (transform.forward * tempForwardSpeed * Time.deltaTime);
+		character.Move (transform.right * tempStrafeSpeed * Time.deltaTime);
 
-        Debug.Log("Velocity: " + GetComponent<Rigidbody>().velocity);
+		character.Move (new Vector3 (0, -1, 0));
+		//torso.position += transform.forward * tempForwardSpeed * Time.deltaTime;
+		//torso.position += transform.right * tempStrafeSpeed * Time.deltaTime;
+
+        //Debug.Log("Velocity: " + GetComponent<Rigidbody>().velocity);
         
     }
 }

@@ -14,9 +14,4 @@ public class NetworkPlayerChoice : MonoBehaviour {
 		GetComponent<GuiLobbyManager> ().playerPrefab = characters [i];
 		currentI = i;
 	}
-
-	void Update()
-	{
-		
-	}
 }

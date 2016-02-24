@@ -273,7 +273,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Swat_Left
+      name: Swat_Right
       takeName: Take 001
       firstFrame: 1
       lastFrame: 17
@@ -385,7 +385,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 1
     - serializedVersion: 16
-      name: Swat_Right
+      name: Swat_Left
       takeName: Take 001
       firstFrame: 17
       lastFrame: 31

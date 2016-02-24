@@ -11,13 +11,13 @@ public class RotateHead : MonoBehaviour {
 
 	public Camera mainCam;
 
-	public Transform leftClavicle;
-	public Transform rightClavicle;
+	//public Transform Center;
+	//public Transform rightClavicle;
 
     void Start () {
 		mainCam = Camera.main;
 	}
-	
+
     void Update () {
 
         xAxis += -Input.GetAxis("ViewHorizontal") * hRotationSpeed * Time.deltaTime;
@@ -25,10 +25,13 @@ public class RotateHead : MonoBehaviour {
 
 		transform.eulerAngles = new Vector3(0, yAxis + 180, 0);
 
+		xAxis = Mathf.Clamp (xAxis, -50, 70);
+
 		mainCam.transform.eulerAngles = new Vector3 (xAxis, yAxis, 0);
 
-		//leftClavicle.eulerAngles = new Vector3 (xAxis /2, 0, 0);
+		//Center.eulerAngles = new Vector3(xAxis, mainCam.transform.eulerAngles.y + 180, 0);
 
-		//rightClavicle.eulerAngles = new Vector3 (-xAxis /2, 0, 0);
+		//rightClavicle.eulerAngles = new Vector3 (xAxis, 0, 0);
+
     }
 }
