@@ -23,7 +23,7 @@ public class RotateHead : MonoBehaviour {
         xAxis += -Input.GetAxis("ViewHorizontal") * hRotationSpeed * Time.deltaTime;
         yAxis += Input.GetAxis("ViewVertical") * vRotationSpeed * Time.deltaTime;
 
-        transform.eulerAngles = new Vector3(0, yAxis, 270);
+		transform.eulerAngles = new Vector3(0, yAxis + 180, 0);
 
 		mainCam.transform.eulerAngles = new Vector3 (xAxis, yAxis, 0);
 

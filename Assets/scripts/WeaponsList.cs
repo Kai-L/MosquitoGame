@@ -11,9 +11,10 @@ public class WeaponsList : MonoBehaviour {
 
     public List<Transform> AvailableSpawns;
 
-    int seed = 42;
+    public int seed = 42;
 
 	void Start () {
+		AvailableWeapons = Weapons;
         GenerateWeapons(numOfWeapons);
 	}
 
@@ -25,10 +26,10 @@ public class WeaponsList : MonoBehaviour {
         {
             int randWeapon = (int)Random.Range(0, AvailableWeapons.Count - 1);
             int randSpawn = (int)Random.Range(0, AvailableSpawns.Count - 1);
-            Debug.Log(randWeapon);
+			Debug.Log(AvailableWeapons[randWeapon].name);
+			Instantiate(AvailableWeapons[randWeapon], AvailableSpawns[randSpawn].position, Quaternion.identity);
             AvailableWeapons.Remove(AvailableWeapons[randWeapon]);
             AvailableSpawns.Remove(AvailableSpawns[randSpawn]);
-            //Instantiate(AvailableWeapons[randWeapon], AvailableSpawn[randSpawn], Quaternion.identity);
         }
     }
 }

@@ -2,7 +2,7 @@
 using UnityEngine.Networking;
 using System.Collections;
 
-public class SleepyMovement : NetworkBehaviour {
+public class SleepyMovement : MonoBehaviour {
 
 	public Camera mainCamera;
 	public NetworkIdentity networkIdentity;
@@ -31,10 +31,12 @@ public class SleepyMovement : NetworkBehaviour {
 
     void Update () {
 
+		/*
 		if (!networkIdentity.isLocalPlayer) {
 			Destroy (mainCamera);
 			return;
 		}
+		*/
 
         /*
 		Debug.Log (torso.velocity);
@@ -68,11 +70,11 @@ public class SleepyMovement : NetworkBehaviour {
         Debug.Log("Vertical axis: " + Input.GetAxis("Vertical"));
         if (Input.GetAxis("Vertical") > 0)
         {
-			tempForwardSpeed = forwardMoveSpeed;
+			tempForwardSpeed = -forwardMoveSpeed;
         }
         else if (Input.GetAxis("Vertical") < 0)
         {
-			tempForwardSpeed = -forwardMoveSpeed;
+			tempForwardSpeed = forwardMoveSpeed;
 
         }
         else
@@ -85,11 +87,11 @@ public class SleepyMovement : NetworkBehaviour {
         Debug.Log("Horizonal axis: " + Input.GetAxis("Horizontal"));
         if (Input.GetAxis("Horizontal") > 0)
         {
-			tempStrafeSpeed = strafeMoveSpeed;
+			tempStrafeSpeed = -strafeMoveSpeed;
         }
         else if (Input.GetAxis("Horizontal") < 0)
         {
-			tempStrafeSpeed = -strafeMoveSpeed;
+			tempStrafeSpeed = strafeMoveSpeed;
         }
         else
         {
@@ -103,7 +105,7 @@ public class SleepyMovement : NetworkBehaviour {
         }
 
 		torso.position += transform.forward * tempForwardSpeed * Time.deltaTime;
-		torso.position += transform.up * tempStrafeSpeed * Time.deltaTime;
+		torso.position += transform.right * tempStrafeSpeed * Time.deltaTime;
 
         Debug.Log("Velocity: " + GetComponent<Rigidbody>().velocity);
         

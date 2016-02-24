@@ -89,6 +89,28 @@ ModelImporter:
     400078: //RootNode
     400080: Spine
     400082: Wrist
+    2300000: body
+    2300002: Head 1
+    2300004: Head1
+    2300006: L_arm
+    2300008: L_ear
+    2300010: L_leg
+    2300012: Nose
+    2300014: R_arm
+    2300016: R_ear
+    2300018: R_leg
+    2300020: Short
+    3300000: body
+    3300002: Head 1
+    3300004: Head1
+    3300006: L_arm
+    3300008: L_ear
+    3300010: L_leg
+    3300012: Nose
+    3300014: R_arm
+    3300016: R_ear
+    3300018: R_leg
+    3300020: Short
     4300000: R_leg
     4300002: L_leg
     4300004: R_arm
@@ -103,7 +125,121 @@ ModelImporter:
     7400000: Swat_Left
     7400002: Swat_Right
     7400004: Swat_Both
+    7400006: Swat_Left //// Root
+    7400008: Swat_Right //// Root
+    7400010: Swat_Both //// Root
+    7400012: Swat_Left //// Right_Thigh
+    7400014: Swat_Right //// Right_Thigh
+    7400016: Swat_Both //// Right_Thigh
+    7400018: Swat_Left //// Right_Knee
+    7400020: Swat_Right //// Right_Knee
+    7400022: Swat_Both //// Right_Knee
+    7400024: Swat_Left //// Right_Ankle
+    7400026: Swat_Right //// Right_Ankle
+    7400028: Swat_Both //// Right_Ankle
+    7400030: Swat_Left //// Right_Feet
+    7400032: Swat_Right //// Right_Feet
+    7400034: Swat_Both //// Right_Feet
+    7400036: Swat_Left //// Right_Feet_Toes
+    7400038: Swat_Right //// Right_Feet_Toes
+    7400040: Swat_Both //// Right_Feet_Toes
+    7400042: Swat_Left //// Left_Thigh
+    7400044: Swat_Right //// Left_Thigh
+    7400046: Swat_Both //// Left_Thigh
+    7400048: Swat_Left //// Left_Knee
+    7400050: Swat_Right //// Left_Knee
+    7400052: Swat_Both //// Left_Knee
+    7400054: Swat_Left //// Left_Ankle
+    7400056: Swat_Right //// Left_Ankle
+    7400058: Swat_Both //// Left_Ankle
+    7400060: Swat_Left //// Left_Feet
+    7400062: Swat_Right //// Left_Feet
+    7400064: Swat_Both //// Left_Feet
+    7400066: Swat_Left //// Left_Feet_Toes
+    7400068: Swat_Right //// Left_Feet_Toes
+    7400070: Swat_Both //// Left_Feet_Toes
+    7400072: Swat_Left //// Wrist
+    7400074: Swat_Right //// Wrist
+    7400076: Swat_Both //// Wrist
+    7400078: Swat_Left //// Spine
+    7400080: Swat_Right //// Spine
+    7400082: Swat_Both //// Spine
+    7400084: Swat_Left //// Chest
+    7400086: Swat_Right //// Chest
+    7400088: Swat_Both //// Chest
+    7400090: Swat_Left //// Right_Sholder
+    7400092: Swat_Right //// Right_Sholder
+    7400094: Swat_Both //// Right_Sholder
+    7400096: Swat_Left //// Right_Elbow
+    7400098: Swat_Right //// Right_Elbow
+    7400100: Swat_Both //// Right_Elbow
+    7400102: Swat_Left //// Right_Wrist
+    7400104: Swat_Right //// Right_Wrist
+    7400106: Swat_Both //// Right_Wrist
+    7400108: Swat_Left //// Right_hand
+    7400110: Swat_Right //// Right_hand
+    7400112: Swat_Both //// Right_hand
+    7400114: Swat_Left //// Left_Sholder
+    7400116: Swat_Right //// Left_Sholder
+    7400118: Swat_Both //// Left_Sholder
+    7400120: Swat_Left //// Left_Elbow
+    7400122: Swat_Right //// Left_Elbow
+    7400124: Swat_Both //// Left_Elbow
+    7400126: Swat_Left //// Left_Wrist
+    7400128: Swat_Right //// Left_Wrist
+    7400130: Swat_Both //// Left_Wrist
+    7400132: Swat_Left //// Left_hand
+    7400134: Swat_Right //// Left_hand
+    7400136: Swat_Both //// Left_hand
+    7400138: Swat_Left //// Neck
+    7400140: Swat_Right //// Neck
+    7400142: Swat_Both //// Neck
+    7400144: Swat_Left //// Main
+    7400146: Swat_Right //// Main
+    7400148: Swat_Both //// Main
     9500000: //RootNode
+    11100000: //RootNode
+    11100002: Body
+    11100004: body
+    11100006: Chest
+    11100008: Head
+    11100010: Head 1
+    11100012: Head 2
+    11100014: Head1
+    11100016: L_arm
+    11100018: L_ear
+    11100020: L_leg
+    11100022: left
+    11100024: Left_Ankle
+    11100026: Left_Elbow
+    11100028: Left_Feet
+    11100030: Left_Feet_Toes
+    11100032: Left_hand
+    11100034: Left_Knee
+    11100036: Left_Sholder
+    11100038: Left_Thigh
+    11100040: Left_Wrist
+    11100042: Main
+    11100044: Neck
+    11100046: Neck_01
+    11100048: Nose
+    11100050: R_arm
+    11100052: R_ear
+    11100054: R_leg
+    11100056: Right_Ankle
+    11100058: Right_Elbow
+    11100060: Right_Feet
+    11100062: Right_Feet_Toes
+    11100064: Right_hand
+    11100066: Right_Knee
+    11100068: Right_Sholder
+    11100070: Right_Thigh
+    11100072: Right_Wrist
+    11100074: Root
+    11100076: Short
+    11100078: Sleepy
+    11100080: Spine
+    11100082: Wrist
     13700000: body
     13700002: Head 1
     13700004: Head1
@@ -509,7 +645,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
