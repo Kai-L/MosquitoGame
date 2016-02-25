@@ -1,52 +1,27 @@
 fileFormatVersion: 2
-guid: 8d20d68c2f2754acda0a637cfab588bc
-timeCreated: 1456362631
-licenseType: Free
+guid: bf2b5105bafbe4070b2923666e15f069
+timeCreated: 1456434673
+licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: bulb2
+    100000: base
     100002: //RootNode
-    100004: lamp1
-    100006: lamp2
-    100008: lamp3
-    100010: lamp4
-    100012: lamp5
-    100014: lamp6
-    100016: lamp7
-    400000: bulb2
+    100004: lampshade
+    100006: light_bulb
+    400000: base
     400002: //RootNode
-    400004: lamp1
-    400006: lamp2
-    400008: lamp3
-    400010: lamp4
-    400012: lamp5
-    400014: lamp6
-    400016: lamp7
-    2300000: bulb2
-    2300002: lamp1
-    2300004: lamp2
-    2300006: lamp3
-    2300008: lamp4
-    2300010: lamp5
-    2300012: lamp6
-    2300014: lamp7
-    3300000: bulb2
-    3300002: lamp1
-    3300004: lamp2
-    3300006: lamp3
-    3300008: lamp4
-    3300010: lamp5
-    3300012: lamp6
-    3300014: lamp7
-    4300000: lamp1
-    4300002: lamp2
-    4300004: lamp3
-    4300006: lamp4
-    4300008: lamp5
-    4300010: lamp6
-    4300012: lamp7
-    4300014: bulb2
+    400004: lampshade
+    400006: light_bulb
+    2300000: base
+    2300002: lampshade
+    2300004: light_bulb
+    3300000: base
+    3300002: lampshade
+    3300004: light_bulb
+    4300000: base
+    4300002: lampshade
+    4300004: light_bulb
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -72,7 +47,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 150
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
