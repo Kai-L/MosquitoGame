@@ -1,0 +1,138 @@
+fileFormatVersion: 2
+guid: 49de2f8ddee834078a193f3aea430f55
+timeCreated: 1456362580
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Sword
+    100002: //RootNode
+    100004: sword1
+    100006: sword2
+    100008: sword3
+    100010: SwordCover
+    100012: swordCover1
+    100014: swordCover2
+    100016: swordCover3
+    100018: swordCover4
+    100020: swordCover5
+    100022: swordCover6
+    100024: swordCover7
+    100026: swordCover8
+    100028: swordCover9
+    400000: Sword
+    400002: //RootNode
+    400004: sword1
+    400006: sword2
+    400008: sword3
+    400010: SwordCover
+    400012: swordCover1
+    400014: swordCover2
+    400016: swordCover3
+    400018: swordCover4
+    400020: swordCover5
+    400022: swordCover6
+    400024: swordCover7
+    400026: swordCover8
+    400028: swordCover9
+    2300000: sword1
+    2300002: sword2
+    2300004: sword3
+    2300006: swordCover1
+    2300008: swordCover2
+    2300010: swordCover3
+    2300012: swordCover4
+    2300014: swordCover5
+    2300016: swordCover6
+    2300018: swordCover7
+    2300020: swordCover8
+    2300022: swordCover9
+    3300000: sword1
+    3300002: sword2
+    3300004: sword3
+    3300006: swordCover1
+    3300008: swordCover2
+    3300010: swordCover3
+    3300012: swordCover4
+    3300014: swordCover5
+    3300016: swordCover6
+    3300018: swordCover7
+    3300020: swordCover8
+    3300022: swordCover9
+    4300000: sword1
+    4300002: sword2
+    4300004: sword3
+    4300006: swordCover1
+    4300008: swordCover2
+    4300010: swordCover3
+    4300012: swordCover4
+    4300014: swordCover5
+    4300016: swordCover6
+    4300018: swordCover7
+    4300020: swordCover8
+    4300022: swordCover9
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
