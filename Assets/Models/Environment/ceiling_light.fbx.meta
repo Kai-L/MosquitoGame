@@ -1,22 +1,27 @@
 fileFormatVersion: 2
-guid: 2bf2743683ab0431eaabb07999c7ce69
-timeCreated: 1456016188
-licenseType: Free
+guid: bf2b5105bafbe4070b2923666e15f069
+timeCreated: 1456434673
+licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: lampshade
-    100004: light_bulb
-    400000: //RootNode
-    400002: lampshade
-    400004: light_bulb
-    2300000: lampshade
-    2300002: light_bulb
-    3300000: lampshade
-    3300002: light_bulb
-    4300000: lampshade
-    4300002: light_bulb
+    100000: base
+    100002: //RootNode
+    100004: lampshade
+    100006: light_bulb
+    400000: base
+    400002: //RootNode
+    400004: lampshade
+    400006: light_bulb
+    2300000: base
+    2300002: lampshade
+    2300004: light_bulb
+    3300000: base
+    3300002: lampshade
+    3300004: light_bulb
+    4300000: base
+    4300002: lampshade
+    4300004: light_bulb
     9500000: //RootNode
   materials:
     importMaterials: 1
