@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 4e08451c71cc24299b640a87907f1466
+timeCreated: 1456859657
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: abdomen
+    100002: eye_left
+    100004: eye_right
+    100006: eyes
+    100008: feet
+    100010: feet_left_01
+    100012: feet_left_02
+    100014: feet_right_01
+    100016: feet_right_02
+    100018: head
+    100020: //RootNode
+    100022: mouth
+    100024: shield
+    100026: shield1
+    100028: shield2
+    100030: shield3
+    100032: thorax
+    100034: wing_left
+    100036: wing_right
+    100038: wings
+    400000: abdomen
+    400002: eye_left
+    400004: eye_right
+    400006: eyes
+    400008: feet
+    400010: feet_left_01
+    400012: feet_left_02
+    400014: feet_right_01
+    400016: feet_right_02
+    400018: head
+    400020: //RootNode
+    400022: mouth
+    400024: shield
+    400026: shield1
+    400028: shield2
+    400030: shield3
+    400032: thorax
+    400034: wing_left
+    400036: wing_right
+    400038: wings
+    2300000: abdomen
+    2300002: eye_left
+    2300004: eye_right
+    2300006: feet_left_01
+    2300008: feet_left_02
+    2300010: feet_right_01
+    2300012: feet_right_02
+    2300014: head
+    2300016: mouth
+    2300018: shield1
+    2300020: shield2
+    2300022: shield3
+    2300024: thorax
+    2300026: wing_left
+    2300028: wing_right
+    3300000: abdomen
+    3300002: eye_left
+    3300004: eye_right
+    3300006: feet_left_01
+    3300008: feet_left_02
+    3300010: feet_right_01
+    3300012: feet_right_02
+    3300014: head
+    3300016: mouth
+    3300018: shield1
+    3300020: shield2
+    3300022: shield3
+    3300024: thorax
+    3300026: wing_left
+    3300028: wing_right
+    4300000: head
+    4300002: abdomen
+    4300004: mouth
+    4300006: thorax
+    4300008: shield1
+    4300010: shield2
+    4300012: shield3
+    4300014: feet_left_01
+    4300016: feet_left_02
+    4300018: feet_right_01
+    4300020: feet_right_02
+    4300022: eye_right
+    4300024: eye_left
+    4300026: wing_right
+    4300028: wing_left
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 50
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
