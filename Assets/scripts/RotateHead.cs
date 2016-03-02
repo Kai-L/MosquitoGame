@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class RotateHead : MonoBehaviour {
+public class RotateHead : NetworkBehaviour {
 
     public float hRotationSpeed;
     public float vRotationSpeed;
@@ -19,6 +20,10 @@ public class RotateHead : MonoBehaviour {
 	}
 
     void Update () {
+
+		if (!isLocalPlayer) {
+			return;
+		}
 
         xAxis += -Input.GetAxis("ViewHorizontal") * hRotationSpeed * Time.deltaTime;
         yAxis += Input.GetAxis("ViewVertical") * vRotationSpeed * Time.deltaTime;

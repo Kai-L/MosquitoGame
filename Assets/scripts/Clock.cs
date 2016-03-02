@@ -21,10 +21,10 @@ public class Clock : MonoBehaviour {
         currentHour = startingHour;
         currentMinute = startingMinutes;
         text.text = startingHour.ToString("00") + ":" + startingMinutes.ToString("00");
-        StartCoroutine(TickSecond());
+        //StartCoroutine(TickSecond());
     }
 
-	IEnumerator TickSecond()
+	public IEnumerator TickSecond()
     {
         currentMinute += 1;
         if(currentMinute == 60)
