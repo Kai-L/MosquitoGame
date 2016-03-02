@@ -12,8 +12,11 @@ public class RotateHead : NetworkBehaviour {
 
 	public Camera mainCam;
 
-	//public Transform Center;
-	//public Transform rightClavicle;
+    //public Transform Center;
+    //public Transform rightClavicle;
+
+    public Transform leftShoulder;
+    public Transform rightShoulder;
 
     void Start () {
 		mainCam = Camera.main;
@@ -28,7 +31,7 @@ public class RotateHead : NetworkBehaviour {
         xAxis += -Input.GetAxis("ViewHorizontal") * hRotationSpeed * Time.deltaTime;
         yAxis += Input.GetAxis("ViewVertical") * vRotationSpeed * Time.deltaTime;
 
-		transform.eulerAngles = new Vector3(0, yAxis + 180, 0);
+		transform.eulerAngles = new Vector3(0, yAxis, 0);
 
 		xAxis = Mathf.Clamp (xAxis, -50, 70);
 
@@ -36,7 +39,8 @@ public class RotateHead : NetworkBehaviour {
 
 		//Center.eulerAngles = new Vector3(xAxis, mainCam.transform.eulerAngles.y + 180, 0);
 
-		//rightClavicle.eulerAngles = new Vector3 (xAxis, 0, 0);
+		rightShoulder.localEulerAngles = new Vector3 (xAxis, 0, 0);
+        leftShoulder.localEulerAngles = new Vector3(xAxis, 0, 0);
 
     }
 }

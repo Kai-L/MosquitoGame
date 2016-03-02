@@ -73,11 +73,11 @@ public class SleepyMovement : MonoBehaviour {
         Debug.Log("Vertical axis: " + Input.GetAxis("Vertical"));
         if (Input.GetAxis("Vertical") > 0)
         {
-			tempForwardSpeed = -forwardMoveSpeed;
+			tempForwardSpeed = forwardMoveSpeed;
         }
         else if (Input.GetAxis("Vertical") < 0)
         {
-			tempForwardSpeed = forwardMoveSpeed;
+			tempForwardSpeed = -forwardMoveSpeed;
 
         }
         else
@@ -90,11 +90,11 @@ public class SleepyMovement : MonoBehaviour {
         Debug.Log("Horizonal axis: " + Input.GetAxis("Horizontal"));
         if (Input.GetAxis("Horizontal") > 0)
         {
-			tempStrafeSpeed = -strafeMoveSpeed;
+			tempStrafeSpeed = strafeMoveSpeed;
         }
         else if (Input.GetAxis("Horizontal") < 0)
         {
-			tempStrafeSpeed = strafeMoveSpeed;
+			tempStrafeSpeed = -strafeMoveSpeed;
         }
         else
         {
