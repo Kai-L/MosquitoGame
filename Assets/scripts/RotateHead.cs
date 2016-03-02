@@ -19,7 +19,7 @@ public class RotateHead : NetworkBehaviour {
     public Transform rightShoulder;
 
     void Start () {
-		mainCam = Camera.main;
+		//mainCam = Camera.main;
 	}
 
     void Update () {

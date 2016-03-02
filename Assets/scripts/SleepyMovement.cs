@@ -70,7 +70,7 @@ public class SleepyMovement : MonoBehaviour {
 
 
         // Forward Movement Controls
-        Debug.Log("Vertical axis: " + Input.GetAxis("Vertical"));
+        //Debug.Log("Vertical axis: " + Input.GetAxis("Vertical"));
         if (Input.GetAxis("Vertical") > 0)
         {
 			tempForwardSpeed = forwardMoveSpeed;

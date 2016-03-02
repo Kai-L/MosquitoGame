@@ -9,8 +9,4 @@ public class KillMosquito : MonoBehaviour {
 			Debug.Log ("hit?");
 		}
 	}
-
-	void Update(){
-		
-	}
 }
