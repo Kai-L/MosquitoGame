@@ -6,14 +6,6 @@ public class Lightswitch : MonoBehaviour {
 	public GameObject light;
 	public bool currentLight;
 
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	void OnCollisionEnter(Collision c)
 	{
