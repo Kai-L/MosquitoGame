@@ -4,11 +4,11 @@ using System.Collections;
 public class AmbientSound : MonoBehaviour {
 
 	public AudioClip ambientSound;
-	public AudioClip citySound;
+	public AudioClip[] citySounds;
 
 	private AudioSource source;
-	private int randVolume;
-	private float randTime = 60;
+	private int randClip;
+	private float randTime = 120;
 	private float timeCounter;
 
 	// Use this for initialization
@@ -21,27 +21,28 @@ public class AmbientSound : MonoBehaviour {
 		source.PlayOneShot(ambientSound);
 
 		if (timeCounter > randTime) {
-			randTime = Random.Range(0, 120);
+			randTime = Random.Range(60, 180);
 			timeCounter = 0;
-			VariableVolume();
-			source.PlayOneShot (citySound, randVolume);
+			source.Stop();
+			ChooseClip();
+			source.Play();
 		}
 
 		timeCounter += Time.deltaTime;
 	}
 
-	void VariableVolume() {
-		randVolume = Random.RandomRange(0, 2);
+	void ChooseClip() {
+		randClip = Random.RandomRange(0, 2);
 
-		switch (randVolume) {
+		switch (randClip) {
 			case 0:
-				source.volume = 1f;
+				source.clip = citySounds[1];
 				break;
 			case 1:
-				source.volume = 0f;
+				source.clip = citySounds[2];
 				break;
 			case 2:
-				source.volume = .5f;
+				source.clip = citySounds[3];
 				break;
 		}
 	}
