@@ -36,9 +36,11 @@ public class GuiLobbyManager : NetworkManager
 	}
 
 	public void SpawnCharacter(){
-		ClientScene.RegisterPrefab (playerPrefab);
+		//ClientScene.RegisterPrefab (playerPrefab);
+		ClientScene.AddPlayer (playerControllerId: 0);
 		NetworkServer.Spawn(playerPrefab);
 		Debug.Log ("Spawning " + playerPrefab.name);
+		playerPrefab = GetComponent<NetworkPlayerChoice> ().characters [GetComponent<NetworkPlayerChoice> ().currentI];
 	}
 
 	void OnLevelWasLoaded()

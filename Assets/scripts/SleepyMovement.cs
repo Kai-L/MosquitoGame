@@ -40,7 +40,7 @@ public class SleepyMovement : MonoBehaviour {
 
 
 		if (!networkIdentity.isLocalPlayer) {
-			Destroy (mainCamera);
+			Destroy (mainCamera.gameObject);
 			return;
 		}
 
