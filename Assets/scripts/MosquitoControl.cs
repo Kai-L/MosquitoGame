@@ -131,6 +131,7 @@ public class MosquitoControl : NetworkBehaviour {
         if (Input.GetAxis("Horizontal") > 0)
         {
             tempVel.x = strafeMoveSpeed;
+
         }
         else if(Input.GetAxis("Horizontal") < 0)
         {

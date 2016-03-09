@@ -15,8 +15,8 @@ public class RotateHead : NetworkBehaviour {
     //public Transform Center;
     //public Transform rightClavicle;
 
-    public Transform leftShoulder;
-    public Transform rightShoulder;
+    //public Transform leftShoulder;
+    //public Transform rightShoulder;
 
     void Start () {
 		//mainCam = Camera.main;
@@ -39,8 +39,8 @@ public class RotateHead : NetworkBehaviour {
 
 		//Center.eulerAngles = new Vector3(xAxis, mainCam.transform.eulerAngles.y + 180, 0);
 
-		rightShoulder.localEulerAngles = new Vector3 (xAxis, 0, 0);
-        leftShoulder.localEulerAngles = new Vector3(xAxis, 0, 0);
+		//rightShoulder.localEulerAngles = new Vector3 (xAxis, 0, 0);
+        //leftShoulder.localEulerAngles = new Vector3(xAxis, 0, 0);
 
     }
 }

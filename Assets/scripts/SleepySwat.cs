@@ -4,7 +4,7 @@ using System.Collections;
 
 public class SleepySwat : MonoBehaviour {
 
-	//public Animation anim;
+	Animator anim;
     //public Animation lAnim;
     //public Animation rAnim;
 	public NetworkIdentity networkIdentity;
@@ -13,60 +13,60 @@ public class SleepySwat : MonoBehaviour {
     AudioSource audioSource;
     public AudioClip swingSound;
 
+	public float cameraAngle;
+	public float setSwat;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         pickup = GetComponent<Pickup>();
 
+		anim = GetComponent<Animator> ();
+
     }
     
-	void LateUpdate() {
+	void Update() {
 		if (!networkIdentity.isLocalPlayer) {
 			return;
 		}
 
-        //if (anim.isPlaying == false)
-        //{
-            if (Input.GetKeyDown("q"))
-            {
-                Debug.Log("Playing Left Hand Swat Animation");
-				//anim.CrossFade("L_Swat", 0.5f, PlayMode.StopAll);
-                if(pickup.currentObject != null)
-                {
-                    pickup.currentObject.PlaySwingSound();
-                }
-                else
-                {
-                    audioSource.PlayOneShot(swingSound);
-                }
-            }
-            if (Input.GetKeyDown("e"))
-            {
-                Debug.Log("Playing Right Hand Swat Animation");
-				//anim.CrossFade("R_Swat", 0.5f, PlayMode.StopAll);
-                if (pickup.currentObject != null)
-                {
-                    pickup.currentObject.PlaySwingSound();
-                }
-                else
-                {
-                    audioSource.PlayOneShot(swingSound);
-                }
-            }
-            if (Input.GetKeyDown("q") && Input.GetKeyDown("e"))
-            {
-                Debug.Log("Playing Both Hand Swat Animation");
-				//anim.CrossFade("B_Swat", 0.5f, PlayMode.StopAll);
-                if (pickup.currentObject != null)
-                {
-                    pickup.currentObject.PlaySwingSound();
-                }
-                else
-                {
-                    audioSource.PlayOneShot(swingSound);
-                }
-            }
-        //}
+		cameraAngle = GetComponent<RotateHead> ().xAxis;
+		if (cameraAngle > 30) {
+			setSwat = 0;
+		} else if (cameraAngle > -10) {
+			setSwat = .5f;
+		} else {
+			setSwat = 1;
+		}
 
+		if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log("Playing Left Hand Swat Animation");
+			anim.Play ("L_Swat");
+			anim.SetFloat ("L_swatMeter", setSwat);
+            if(pickup.currentObject != null)
+            {
+                pickup.currentObject.PlaySwingSound();
+            }
+            else
+            {
+                audioSource.PlayOneShot(swingSound);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Playing Right Hand Swat Animation");
+			anim.Play ("R_Swat");
+			anim.SetFloat ("R_swatMeter", setSwat);
+            if (pickup.currentObject != null)
+            {
+                pickup.currentObject.PlaySwingSound();
+            }
+            else
+            {
+                audioSource.PlayOneShot(swingSound);
+            }
+        }
 	}
 }
