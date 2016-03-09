@@ -8,6 +8,9 @@ public class MosquitoControl : NetworkBehaviour {
 
 	//int isFlying = Animator.StringToHash("isFlying");
 
+	bool isFlapping = false;
+	bool usesGravity = true;
+
 	[Header("Player Select")]
 	public int player;
 
@@ -18,6 +21,7 @@ public class MosquitoControl : NetworkBehaviour {
     public float hRotationSpeed;
     public float vRotationSpeed;
     public float deceleration;
+	public float gravity;
 
     int currentFlap = 0;
 
@@ -26,6 +30,7 @@ public class MosquitoControl : NetworkBehaviour {
     public float yAxis;
 
 	GameObject mainCamera;
+	CharacterController character;
 
     public override float GetNetworkSendInterval ()
 	{
@@ -33,6 +38,7 @@ public class MosquitoControl : NetworkBehaviour {
 	}
 
 	void Start(){
+		character = GetComponent<CharacterController> ();
 		mainCamera = this.gameObject.transform.FindChild ("Main Camera").gameObject;
 
 		//accessing the animator
@@ -57,6 +63,10 @@ public class MosquitoControl : NetworkBehaviour {
 			return;
 		}
 
+		if (!isFlapping && usesGravity) {
+			character.Move (Vector3.down * Time.deltaTime * gravity);
+		}
+			
 		if (Input.GetKey (KeyCode.LeftShift)) {
 			Cursor.lockState = CursorLockMode.None;
 		}
@@ -72,7 +82,8 @@ public class MosquitoControl : NetworkBehaviour {
         {
             SetFastMovement();
 
-            GetComponent<Rigidbody>().AddForce(Vector3.up * flightSpeed);
+            //GetComponent<Rigidbody>().AddForce(Vector3.up * flightSpeed);
+			StartCoroutine(Flap());
 
 			//animator stuff
 			anim.SetBool ("isFlying", true);
@@ -113,6 +124,7 @@ public class MosquitoControl : NetworkBehaviour {
             tempVel.z = Mathf.Lerp(tempVel.z, 0, deceleration);
             //GetComponent<Rigidbody>().AddRelativeForce(-Vector3.forward);
         }
+		character.Move(transform.forward * tempVel.z * Time.deltaTime);
 
         // Strafe Movement Controls
 
@@ -130,10 +142,28 @@ public class MosquitoControl : NetworkBehaviour {
             tempVel.x = Mathf.Lerp(tempVel.x, 0, deceleration);
         }
 
-        GetComponent<Rigidbody>().velocity = transform.TransformDirection(tempVel);
+		character.Move (transform.right * tempVel.x * Time.deltaTime);
+
+        //GetComponent<Rigidbody>().velocity = transform.TransformDirection(tempVel);
 	}
 
-    void OnCollisionEnter(Collision c)
+	IEnumerator Flap()
+	{
+		isFlapping = true;
+		float startingValue = 0.0f;
+		float endingValue = 10.0f;
+		while (startingValue < endingValue) {
+			if (startingValue >= endingValue - 1) {
+				isFlapping = false;
+			}
+			startingValue += 1f;
+			Mathf.Lerp (flightSpeed, flightSpeed * 2, startingValue / endingValue);
+			character.Move(transform.up * flightSpeed * Time.deltaTime);
+			yield return null;
+		}
+	}
+
+    void OnControllerColliderHit(ControllerColliderHit c)
     {
         if (c.gameObject != this.gameObject && c.gameObject.tag != "Ceiling")
         {
@@ -148,16 +178,20 @@ public class MosquitoControl : NetworkBehaviour {
     {
         strafeMoveSpeed = 15;
         forwardMoveSpeed = 15;
-		GetComponent<Rigidbody> ().useGravity = true;
-		GetComponent<Rigidbody> ().drag = 0;
+
+		usesGravity = true;
+		//GetComponent<Rigidbody> ().useGravity = true;
+		//GetComponent<Rigidbody> ().drag = 0;
     }
 
     void SetSlowMovement()
     {
-        strafeMoveSpeed = 1;
-        forwardMoveSpeed = 1;
-		GetComponent<Rigidbody> ().useGravity = false;
-		GetComponent<Rigidbody> ().drag = 1;
+        strafeMoveSpeed = 0;
+        forwardMoveSpeed = 0;
+
+		usesGravity = false;
+		//GetComponent<Rigidbody> ().useGravity = false;
+		//GetComponent<Rigidbody> ().drag = 1;
 
 		anim.SetBool ("isIdle", true);
 		anim.SetBool ("isFalling", false);

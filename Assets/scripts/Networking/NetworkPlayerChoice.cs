@@ -5,13 +5,17 @@ using System.Collections;
 public class NetworkPlayerChoice : MonoBehaviour {
 
 	public GameObject[] characters;
-	private int currentI;
+	public int currentI;
 
 	bool hasSwapped = false;
 
 	public void SetCharacter(int i)
 	{
 		GetComponent<GuiLobbyManager> ().playerPrefab = characters [i];
-		currentI = i;
+		if (i == 0) {
+			currentI = 1;
+		} else {
+			currentI = 0;
+		}
 	}
 }
