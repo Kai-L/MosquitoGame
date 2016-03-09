@@ -4,12 +4,12 @@ using System.Collections;
 public class Lightswitch : MonoBehaviour {
 
 	public GameObject light;
-	public bool currentLight;
+	public bool lightActive;
 
 
 	void OnCollisionEnter(Collision c)
 	{
-		currentLight = !currentLight;
-		light.SetActive (currentLight);
+		lightActive = !lightActive;
+		light.SetActive (lightActive);
 	}
 }
