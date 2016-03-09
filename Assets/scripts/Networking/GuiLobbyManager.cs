@@ -6,11 +6,33 @@ using UnityEngine.Networking.Match;
 
 public class GuiLobbyManager : NetworkManager
 {
-	public string onlineStatus;
+	public Button buttonHuman;
+	public Button buttonMosquito;
 
 	void Start()
 	{
+		StartMatchMaker ();
+	}
 
+	public void BeginHost()
+	{
+		StartClient ();
+		matchMaker.CreateMatch (matchName, matchSize, true, "", OnMatchCreate);
+	}
+
+	public void BeginJoin()
+	{
+		if (matches == null) {
+			matchMaker.ListMatches (0, 20, "", OnMatchList);
+		}
+	
+		matchName = matches[0].name;
+		matchSize = (uint)matches[0].currentSize;
+		matchMaker.JoinMatch (matches[0].networkId, "", OnMatchJoined);
+	}
+
+	public void ClientReady(){
+		ClientScene.Ready (client.connection);
 	}
 
 	void OnLevelWasLoaded()
