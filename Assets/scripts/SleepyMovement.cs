@@ -4,6 +4,8 @@ using System.Collections;
 
 public class SleepyMovement : MonoBehaviour {
 
+	Animator anim;
+
 	public Camera mainCamera;
 	public NetworkIdentity networkIdentity;
 
@@ -30,6 +32,8 @@ public class SleepyMovement : MonoBehaviour {
     {
         Cursor.lockState = CursorLockMode.Locked;
 		character = GetComponent<CharacterController> ();
+
+		anim = GetComponent<Animator> ();
     }
 
     void Update () {
@@ -70,7 +74,7 @@ public class SleepyMovement : MonoBehaviour {
 
 
         // Forward Movement Controls
-        //Debug.Log("Vertical axis: " + Input.GetAxis("Vertical"));
+        Debug.Log("Vertical axis: " + Input.GetAxis("Vertical"));
         if (Input.GetAxis("Vertical") > 0)
         {
 			tempForwardSpeed = forwardMoveSpeed;
@@ -83,18 +87,22 @@ public class SleepyMovement : MonoBehaviour {
         else
         {
             tempForwardSpeed = 0;
+			anim.SetFloat ("Speed", tempForwardSpeed);
 			//tempForwardSpeed = Mathf.Lerp (tempForwardSpeed, 0, deceleration);
         }
 
+		anim.SetFloat ("Speed", Mathf.Abs(Input.GetAxis("Vertical")));
         // Strafe Movement Controls
-        Debug.Log("Horizonal axis: " + Input.GetAxis("Horizontal"));
+        //Debug.Log("Horizonal axis: " + Input.GetAxis("Horizontal"));
         if (Input.GetAxis("Horizontal") > 0)
         {
 			tempStrafeSpeed = strafeMoveSpeed;
+
         }
         else if (Input.GetAxis("Horizontal") < 0)
         {
 			tempStrafeSpeed = -strafeMoveSpeed;
+		
         }
         else
         {
