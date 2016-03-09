@@ -44,10 +44,12 @@ public class AdaptiveLight : MonoBehaviour {
 		if (!dawnHasCome) 
 		{
 			directionalLight.color = Color.Lerp (directionalLight.color, dawnColor, currentTime / dawnTime);
+			directionalLight.intensity = Mathf.Lerp (directionalLight.intensity, dawnIntensity, currentTime / dawnTime);
 		} 
 		else 
 		{
 			directionalLight.color = Color.Lerp (directionalLight.color, endColor, currentTime / endTime);
+			directionalLight.intensity = Mathf.Lerp (directionalLight.intensity, endIntensity, currentTime / endTime);
 		}
 		if (currentTime == dawnTime) {
 			dawnHasCome = true;

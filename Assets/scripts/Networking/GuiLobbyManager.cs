@@ -25,7 +25,7 @@ public class GuiLobbyManager : NetworkManager
 		if (matches == null) {
 			matchMaker.ListMatches (0, 20, "", OnMatchList);
 		}
-	
+
 		matchName = matches[0].name;
 		matchSize = (uint)matches[0].currentSize;
 		matchMaker.JoinMatch (matches[0].networkId, "", OnMatchJoined);
@@ -33,6 +33,11 @@ public class GuiLobbyManager : NetworkManager
 
 	public void ClientReady(){
 		ClientScene.Ready (client.connection);
+	}
+
+	public void SpawnCharacter(){
+		NetworkServer.Spawn(playerPrefab);
+		Debug.Log ("Spawning " + playerPrefab.name);
 	}
 
 	void OnLevelWasLoaded()

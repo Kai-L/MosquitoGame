@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EnviroSounds : MonoBehaviour {
-
+	/*
 	private AudioSource audioSource;
 
 	public AudioClip audioClip;
@@ -23,4 +23,5 @@ public class EnviroSounds : MonoBehaviour {
 	void Update () {
 
 	}
+	*/
 }
