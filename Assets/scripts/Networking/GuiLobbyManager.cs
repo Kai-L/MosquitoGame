@@ -36,6 +36,7 @@ public class GuiLobbyManager : NetworkManager
 	}
 
 	public void SpawnCharacter(){
+		ClientScene.RegisterPrefab (playerPrefab);
 		NetworkServer.Spawn(playerPrefab);
 		Debug.Log ("Spawning " + playerPrefab.name);
 	}
