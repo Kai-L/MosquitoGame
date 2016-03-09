@@ -5,6 +5,8 @@ public class Clock : MonoBehaviour {
 
     public TextMesh text;
 
+	public int totalSeconds;
+
     public int startingHour;
     public int startingMinutes;
 
@@ -43,6 +45,7 @@ public class Clock : MonoBehaviour {
         }
         text.text = currentHour.ToString("00") + ":" + currentMinute.ToString("00");
         yield return new WaitForSeconds(rateOfTime);
+		totalSeconds += 1;
         StartCoroutine(TickSecond());
     }
 }
