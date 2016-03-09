@@ -4,6 +4,10 @@ using System.Collections;
 
 public class MosquitoControl : NetworkBehaviour {
 
+	Animator anim;
+
+	//int isFlying = Animator.StringToHash("isFlying");
+
 	[Header("Player Select")]
 	public int player;
 
@@ -30,6 +34,9 @@ public class MosquitoControl : NetworkBehaviour {
 
 	void Start(){
 		mainCamera = this.gameObject.transform.FindChild ("Main Camera").gameObject;
+
+		//accessing the animator
+		anim = GetComponent<Animator>();
 	}
 
 	void OnMouseDown()
@@ -66,6 +73,11 @@ public class MosquitoControl : NetworkBehaviour {
             SetFastMovement();
 
             GetComponent<Rigidbody>().AddForce(Vector3.up * flightSpeed);
+
+			//animator stuff
+			anim.SetBool ("isFlying", true);
+			anim.SetBool ("isFalling", false);
+			anim.SetBool ("isIdle", false);
 
             if (currentFlap == 0)
             {
@@ -146,5 +158,9 @@ public class MosquitoControl : NetworkBehaviour {
         forwardMoveSpeed = 1;
 		GetComponent<Rigidbody> ().useGravity = false;
 		GetComponent<Rigidbody> ().drag = 1;
+
+		anim.SetBool ("isIdle", true);
+		anim.SetBool ("isFalling", false);
+		anim.SetBool ("isFlying", false);
     }
 }
