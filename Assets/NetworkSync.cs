@@ -13,6 +13,8 @@ public class NetworkSync : NetworkBehaviour
 	bool humanAdded = false;
 	bool mosquitoAdded = false;
 
+	public int playersRequired = 2;
+
 	void Start(){
 		StartCoroutine (CheckPlayerCount ());
 	}
@@ -32,7 +34,7 @@ public class NetworkSync : NetworkBehaviour
 
 		yield return new WaitForSeconds (1);
 
-		if (PlayersInGame.Count != 2) {
+		if (PlayersInGame.Count != playersRequired) {
 			StartCoroutine (CheckPlayerCount ());
 		} else {
 			clock.StartCoroutine (clock.TickSecond ());
