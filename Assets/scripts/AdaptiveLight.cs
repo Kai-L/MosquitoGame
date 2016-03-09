@@ -21,11 +21,11 @@ public class AdaptiveLight : MonoBehaviour {
 	public Color dawnAmbient = new Color(163, 165, 52);
 	public float dawnAmbientIntesntiy =2.33f;
 
-	public Color endColor = new Color (255, 249, 154);
-	public float endIntensity = 1.53f;
+	//public Color endColor = new Color (255, 249, 154);
+	//public float endIntensity = 1.53f;
 
-	public int dawnTime = 240;
-	public int endTime = 360;
+	public int dawnTime = 180000;
+	//public int endTime = 360;
 
 	Clock clock;
 
@@ -59,8 +59,8 @@ public class AdaptiveLight : MonoBehaviour {
 		} 
 		else 
 		{
-			directionalLight.color = Color.Lerp (directionalLight.color, endColor, currentTime / endTime);
-			directionalLight.intensity = Mathf.Lerp (directionalLight.intensity, endIntensity, currentTime / endTime);
+			directionalLight.color = Color.Lerp (directionalLight.color, nightColor, currentTime / dawnTime);
+			directionalLight.intensity = Mathf.Lerp (directionalLight.intensity, nightIntensity, currentTime / dawnTime);
 		}
 		if (currentTime == dawnTime) {
 			dawnHasCome = true;
