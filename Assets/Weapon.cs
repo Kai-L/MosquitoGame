@@ -11,6 +11,12 @@ public class Weapon : MonoBehaviour {
     public AudioClip weaponSwing;
     public AudioClip weaponImpact;
 
+	public MeshRenderer[] outlines;
+
+	public Shader silhouetteShader;
+
+	private Shader startShader;
+
 	void Start(){
         audioSource = GetComponent<AudioSource>();
 		snapPoint = gameObject.transform;
@@ -25,8 +31,6 @@ public class Weapon : MonoBehaviour {
 
 	void OnMouseDown() 
 	{
-		sleepyPickup = FindObjectOfType<Pickup> ();
-
 		sleepyPickup.currentObject = this;
 
 		GetComponent<Rigidbody> ().isKinematic = true;
@@ -41,4 +45,19 @@ public class Weapon : MonoBehaviour {
     {
         audioSource.PlayOneShot(weaponImpact);
     }
+
+	void OnMouseEnter(){
+		if (this.GetComponent<Weapon> () != sleepyPickup.currentObject) {
+			foreach (MeshRenderer m in outlines) {
+				startShader = m.material.shader;
+				m.material.shader = silhouetteShader;
+			}
+		}
+	}
+
+	void OnMouseExit(){
+		foreach (MeshRenderer m in outlines) {
+			m.material.shader = startShader;
+		}
+	}
 }
