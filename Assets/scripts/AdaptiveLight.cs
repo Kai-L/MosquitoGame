@@ -50,7 +50,7 @@ public class AdaptiveLight : MonoBehaviour {
 	{
 		currentTime = clock.totalSeconds;
 
-		Debug.Log (currentTime / dawnTime);
+		//Debug.Log (currentTime / dawnTime);
 
 		if (currentTime > 240) 
 		{
