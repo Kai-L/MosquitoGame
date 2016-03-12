@@ -3,29 +3,29 @@ using System.Collections;
 
 public class AmbientSound : MonoBehaviour {
 
+	public AudioSource ambientSource;
 	public AudioClip ambientSound;
+
+	public AudioSource citySource;
 	public AudioClip[] citySounds;
 
-	private AudioSource source;
 	private int randClip;
 	private float randTime;
 	private float timeCounter;
 
 	// Use this for initialization
 	void Awake () {
-		source = GetComponent<AudioSource> ();
+		ambientSource.PlayOneShot(ambientSound);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		source.PlayOneShot(ambientSound);
-
 		if (timeCounter > randTime) {
 			randTime = Random.Range(0, 120);
 			timeCounter = 0;
-			source.Stop();
+			citySource.Stop();
 			ChooseClip();
-			source.PlayOneShot(citySounds[randClip]);
+			citySource.PlayOneShot(citySounds[randClip]);
 		}
 
 		timeCounter += Time.deltaTime;
@@ -36,13 +36,13 @@ public class AmbientSound : MonoBehaviour {
 
 		switch (randClip) {
 			case 0:
-				source.clip = citySounds[0];
+			citySource.clip = citySounds[0];
 				break;
 			case 1:
-				source.clip = citySounds[1];
+			citySource.clip = citySounds[1];
 				break;
 			case 2:
-				source.clip = citySounds[2];
+			citySource.clip = citySounds[2];
 				break;
 		}
 	}
