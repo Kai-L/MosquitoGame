@@ -17,12 +17,19 @@ public class Weapon : MonoBehaviour {
 
 	private Shader startShader;
 
+	LocalPlayer localPlayer;
+
 	void Start(){
         audioSource = GetComponent<AudioSource>();
 		snapPoint = gameObject.transform;
+		localPlayer = FindObjectOfType<LocalPlayer> ();
 	}
 
 	void Update(){
+		if (localPlayer.localPlayer.GetComponent<SleepyMovement>() == null) 
+		{
+			return;
+		}
 		if (sleepyPickup.currentObject != this) {
 			transform.parent = null;
 			GetComponent<Rigidbody> ().isKinematic = false;
@@ -31,6 +38,10 @@ public class Weapon : MonoBehaviour {
 
 	void OnMouseDown() 
 	{
+		if (localPlayer.localPlayer.GetComponent<SleepyMovement>() == null) 
+		{
+			return;
+		}
 		sleepyPickup.currentObject = this;
 
 		GetComponent<Rigidbody> ().isKinematic = true;
@@ -47,17 +58,29 @@ public class Weapon : MonoBehaviour {
     }
 
 	void OnMouseEnter(){
-		if (this.GetComponent<Weapon> () != sleepyPickup.currentObject) {
-			foreach (MeshRenderer m in outlines) {
-				startShader = m.material.shader;
-				m.material.shader = silhouetteShader;
+		if (localPlayer.localPlayer.GetComponent<SleepyMovement>() == null) 
+		{
+			return;
+		}
+		if (sleepyPickup != null) {
+			if (this.GetComponent<Weapon> () != sleepyPickup.currentObject) {
+				foreach (MeshRenderer m in outlines) {
+					startShader = m.material.shader;
+					m.material.shader = silhouetteShader;
+				}
 			}
 		}
 	}
 
 	void OnMouseExit(){
-		foreach (MeshRenderer m in outlines) {
-			m.material.shader = startShader;
+		if (localPlayer.localPlayer.GetComponent<SleepyMovement>() == null) 
+		{
+			return;
+		}
+		if (sleepyPickup != null) {
+			foreach (MeshRenderer m in outlines) {
+				m.material.shader = startShader;
+			}
 		}
 	}
 }

@@ -49,10 +49,11 @@ public class MosquitoControl : NetworkBehaviour {
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
-
+		
 	public override void OnStartLocalPlayer()
 	{
-		GetComponent<MeshRenderer> ().material.color = Color.red;
+		//GetComponent<MeshRenderer> ().material.color = Color.red;
+		FindObjectOfType<LocalPlayer>().localPlayer = this.gameObject;
 	}
 
 	void Update () {

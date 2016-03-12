@@ -2,7 +2,7 @@
 using UnityEngine.Networking;
 using System.Collections;
 
-public class SleepyMovement : MonoBehaviour {
+public class SleepyMovement : NetworkBehaviour {
 
 	Animator anim;
 
@@ -35,6 +35,11 @@ public class SleepyMovement : MonoBehaviour {
 
 		anim = GetComponent<Animator> ();
     }
+
+	public override void OnStartLocalPlayer()
+	{
+		FindObjectOfType<LocalPlayer>().localPlayer = this.gameObject;
+	}
 
     void Update () {
 

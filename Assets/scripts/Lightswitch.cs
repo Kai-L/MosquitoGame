@@ -12,4 +12,10 @@ public class Lightswitch : MonoBehaviour {
 		lightActive = !lightActive;
 		light.SetActive (lightActive);
 	}
+
+	void OnControllerColliderHit(ControllerColliderHit c)
+	{
+		lightActive = !lightActive;
+		light.SetActive (lightActive);
+	}
 }
