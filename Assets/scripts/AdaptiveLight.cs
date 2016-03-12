@@ -19,7 +19,7 @@ public class AdaptiveLight : MonoBehaviour {
 	public float dawnIntensity = 0.75f;
 
 	public Color dawnAmbient = new Color(163, 165, 52);
-	public float dawnAmbientIntesntiy =2.33f;
+	public float dawnAmbientIntensity =2.33f;
 
 	//public Color endColor = new Color (255, 249, 154);
 	//public float endIntensity = 1.53f;
@@ -39,7 +39,7 @@ public class AdaptiveLight : MonoBehaviour {
 
 		directionalLight.color = nightColor;
 		directionalLight.intensity = nightIntensity;
-		RenderSettings.ambientLight = nightAmbient;
+		RenderSettings.ambientSkyColor = nightAmbient;
 		RenderSettings.ambientIntensity = nightAmbientIntensity;
 
 
@@ -50,13 +50,16 @@ public class AdaptiveLight : MonoBehaviour {
 	{
 		currentTime = clock.totalSeconds;
 
-		if (!dawnHasCome) 
+		Debug.Log (currentTime / dawnTime);
+
+		if (currentTime > 240) 
 		{
-			directionalLight.color = Color.Lerp (directionalLight.color, dawnColor, currentTime / dawnTime);
-			directionalLight.intensity = Mathf.Lerp (directionalLight.intensity, dawnIntensity, currentTime / dawnTime);
-			RenderSettings.ambientLight = Color.Lerp (RenderSettings.ambientLight, dawnAmbient, currentTime / dawnTime);
-			RenderSettings.ambientIntensity = Mathf.Lerp (RenderSettings.ambientIntensity, dawnAmbientIntesntiy, currentTime / dawnTime);
+			directionalLight.color = Color.Lerp (nightColor, dawnColor, (currentTime - 240) / (dawnTime - 240));
+			directionalLight.intensity = Mathf.Lerp (nightIntensity, dawnIntensity, (currentTime - 240) / (dawnTime - 240));
+			RenderSettings.ambientSkyColor = Color.Lerp (nightAmbient, dawnAmbient, (currentTime - 240) / (dawnTime - 240));
+			RenderSettings.ambientIntensity = Mathf.Lerp (nightAmbientIntensity, dawnAmbientIntensity, (currentTime - 240) / (dawnTime - 240));
 		} 
+		/*
 		else 
 		{
 			directionalLight.color = Color.Lerp (directionalLight.color, nightColor, currentTime / dawnTime);
@@ -65,6 +68,7 @@ public class AdaptiveLight : MonoBehaviour {
 		if (currentTime == dawnTime) {
 			dawnHasCome = true;
 		}
+		*/
 	}
 
 	/*
