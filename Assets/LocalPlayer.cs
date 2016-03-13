@@ -20,18 +20,21 @@ public class LocalPlayer : MonoBehaviour {
 			return;
 		}
 
-		// This means the local player is Mosquito.
-		if (localPlayer.GetComponent<SleepyMovement> () == null) 
-		{
-			lobbyManager.playerPrefab = networkPlayerChoice.characters [0];
-		localPlayerChecked = true;
-		} 
-		// This means the local player is Sleepy.
-		else 
-		{
-			lobbyManager.playerPrefab = networkPlayerChoice.characters [1];
-		localPlayerChecked = true;
-		}
+        if (localPlayer != null)
+        {
+            // This means the local player is Mosquito.
+            if (localPlayer.GetComponent<SleepyMovement>() == null)
+            {
+                lobbyManager.playerPrefab = networkPlayerChoice.characters[0];
+                localPlayerChecked = true;
+            }
+            // This means the local player is Sleepy.
+            else
+            {
+                lobbyManager.playerPrefab = networkPlayerChoice.characters[1];
+                localPlayerChecked = true;
+            }
+        }
 	}
 
 }

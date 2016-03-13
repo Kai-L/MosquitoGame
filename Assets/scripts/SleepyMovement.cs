@@ -30,6 +30,7 @@ public class SleepyMovement : NetworkBehaviour {
     
     void Start()
     {
+        networkIdentity = FindObjectOfType<NetworkIdentity>();
         Cursor.lockState = CursorLockMode.Locked;
 		character = GetComponent<CharacterController> ();
 

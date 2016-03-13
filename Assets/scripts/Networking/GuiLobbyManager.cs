@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
@@ -8,10 +9,12 @@ public class GuiLobbyManager : NetworkManager
 {
 	public Button buttonHuman;
 	public Button buttonMosquito;
+    NetworkPlayerChoice networkPlayerChoice;
 
 	void Start()
 	{
 		StartMatchMaker ();
+        networkPlayerChoice = GetComponent<NetworkPlayerChoice>();
 	}
 
 	public void BeginHost()
@@ -31,19 +34,22 @@ public class GuiLobbyManager : NetworkManager
 		matchMaker.JoinMatch (matches[0].networkId, "", OnMatchJoined);
 	}
 
-	public void ClientReady(){
-		ClientScene.Ready (client.connection);
-	}
+    public void Spawner(int i)
+    {
+        StartCoroutine(SpawnCharacter(i));
+    }
 
-	public void SpawnCharacter(){
-		//ClientScene.RegisterPrefab (playerPrefab);
-		ClientScene.AddPlayer (0);//client.connection.playerControllers[0].playerControllerId);
-		NetworkServer.Spawn(playerPrefab);
-		Debug.Log ("Spawning " + playerPrefab.name);
-		//playerPrefab = GetComponent<NetworkPlayerChoice> ().characters [GetComponent<NetworkPlayerChoice> ().currentI];
-	}
+	public IEnumerator SpawnCharacter(int i)
+    {
+        playerPrefab = networkPlayerChoice.SetCharacter(i);
+        yield return new WaitForSeconds(1);
+        ClientScene.AddPlayer(client.connection, 0);
+        ClientScene.Ready(client.connection);
+        yield return new WaitForSeconds(2);
+        networkPlayerChoice.CmdNetworkSpawn(playerPrefab);
+    }
 
-	void OnLevelWasLoaded()
+    void OnLevelWasLoaded()
 	{
 		
 	}
