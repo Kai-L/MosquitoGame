@@ -14,7 +14,7 @@ public class ButtonFunctions : MonoBehaviour {
 	}
 
 	public void LoadLobby(){
-		SceneManager.LoadScene ("Menu_NetworkSelect");
+		SceneManager.LoadScene ("SwatTheBug");
 	}
 
 	public void ExitGame(){
@@ -22,7 +22,7 @@ public class ButtonFunctions : MonoBehaviour {
 	}
 
 	public void TempLoadGame(){
-		SceneManager.LoadScene ("Week8_Prototype");
+		SceneManager.LoadScene ("SwatTheBug");
 	}
 
 	public void CloseCharacterSelect(){
