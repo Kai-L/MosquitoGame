@@ -5,10 +5,26 @@ public class Suckspots : MonoBehaviour {
 
 	public GameObject[] suckspots;
 	public int currentSuckspot;
+	public float Timer;
+
+	private float tempTimer;
 
 	void Start () 
 	{
 		SetNewSuckspot ();
+		Timer = 20F;
+		tempTimer = Timer;
+	}
+
+	void Update()
+	{
+		Timer = Timer - Time.deltaTime;
+		if (Timer < 0F) {
+			SetNewSuckspot ();
+			Timer = tempTimer;
+		}
+
+
 	}
 
 	public void SetNewSuckspot(){
