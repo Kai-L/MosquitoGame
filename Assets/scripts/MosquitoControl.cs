@@ -56,7 +56,7 @@ public class MosquitoControl : NetworkBehaviour {
 		FindObjectOfType<LocalPlayer>().localPlayer = this.gameObject;
 	}
 
-	void Update () {
+	void FixedUpdate () {
 
 		if (!isLocalPlayer) 
 		{
@@ -188,10 +188,18 @@ public class MosquitoControl : NetworkBehaviour {
 
     void SetSlowMovement()
     {
-        strafeMoveSpeed = 0;
-        forwardMoveSpeed = 0;
+        if (GetComponent<Rigidbody>().velocity == Vector3.zero)
+        {
+            strafeMoveSpeed = 0;
+            forwardMoveSpeed = 0;
+        }
+        else
+        {
+            strafeMoveSpeed = 1;
+            forwardMoveSpeed = 1;
+        }
 
-		usesGravity = false;
+		usesGravity = true;
 		//GetComponent<Rigidbody> ().useGravity = false;
 		//GetComponent<Rigidbody> ().drag = 1;
 
