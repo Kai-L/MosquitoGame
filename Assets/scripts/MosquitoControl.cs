@@ -32,12 +32,18 @@ public class MosquitoControl : NetworkBehaviour {
 	GameObject mainCamera;
 	CharacterController character;
 
+    LocalPlayer localPlayer;
+
+    [SyncVar]
+    public bool isAlive;
+
     public override float GetNetworkSendInterval ()
 	{
 		return 0;
 	}
 
 	void Start(){
+        localPlayer = FindObjectOfType<LocalPlayer>();
 		character = GetComponent<CharacterController> ();
 		mainCamera = this.gameObject.transform.FindChild ("Main Camera").gameObject;
 

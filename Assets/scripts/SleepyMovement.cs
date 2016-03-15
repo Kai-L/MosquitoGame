@@ -27,9 +27,16 @@ public class SleepyMovement : NetworkBehaviour {
 
 	float tempForwardSpeed = 0;
 	float tempStrafeSpeed = 0;
-    
+
+    LocalPlayer localPlayer;
+
+    [SyncVar]
+    public bool isAlive;
+
     void Start()
     {
+        localPlayer = FindObjectOfType<LocalPlayer>();
+
         networkIdentity = FindObjectOfType<NetworkIdentity>();
         Cursor.lockState = CursorLockMode.Locked;
 		character = GetComponent<CharacterController> ();

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class LocalPlayer : MonoBehaviour {
+public class LocalPlayer : NetworkBehaviour {
 
 	GuiLobbyManager lobbyManager;
 	NetworkPlayerChoice networkPlayerChoice;
