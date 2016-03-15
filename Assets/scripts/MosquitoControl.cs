@@ -62,7 +62,7 @@ public class MosquitoControl : NetworkBehaviour {
 		FindObjectOfType<LocalPlayer>().localPlayer = this.gameObject;
 	}
 
-	void FixedUpdate () {
+	void Update () {
 
 		if (!isLocalPlayer) 
 		{

@@ -10,6 +10,9 @@ public class LocalPlayer : NetworkBehaviour {
 
 	bool localPlayerChecked = false;
 
+    public GameObject winScreen;
+    public GameObject loseScreen;
+
 	void Start(){
 		lobbyManager = FindObjectOfType<GuiLobbyManager> ();
 		networkPlayerChoice = FindObjectOfType<NetworkPlayerChoice> ();
@@ -37,5 +40,15 @@ public class LocalPlayer : NetworkBehaviour {
             }
         }
 	}
+
+    public void localWin()
+    {
+        winScreen.SetActive(true);
+    }
+
+    public void localLoss()
+    {
+        loseScreen.SetActive(true);
+    }
 
 }
