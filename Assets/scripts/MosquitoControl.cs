@@ -180,6 +180,12 @@ public class MosquitoControl : NetworkBehaviour {
             tempVec = Vector3.Lerp(tempVec, Vector3.zero, deceleration);
             GetComponent<Rigidbody>().velocity = tempVec;
         }
+
+        if(c.gameObject.tag == "hand")
+        {
+            Debug.Log("Mosquito DIE");
+            // Mosquito Dies, do things here.
+        }
     }
 
     void SetFastMovement()
