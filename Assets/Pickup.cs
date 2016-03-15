@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class Pickup : MonoBehaviour {
+public class Pickup : NetworkBehaviour {
 
 	public Weapon currentObject;
 	public Transform rightHand;

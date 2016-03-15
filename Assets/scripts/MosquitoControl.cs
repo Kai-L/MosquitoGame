@@ -35,7 +35,7 @@ public class MosquitoControl : NetworkBehaviour {
     LocalPlayer localPlayer;
 
     [SyncVar]
-    public bool isAlive;
+    public bool isAlive = true;
 
     public override float GetNetworkSendInterval ()
 	{
@@ -183,7 +183,10 @@ public class MosquitoControl : NetworkBehaviour {
 
         if(c.gameObject.tag == "hand")
         {
-            Debug.Log("Mosquito DIE");
+            isAlive = false;
+            localPlayer.localLoss(this.gameObject);
+            localPlayer.localWin(FindObjectOfType<SleepyMovement>().gameObject);
+            Debug.Log("Mosquito DIE, sleepy win");
             // Mosquito Dies, do things here.
         }
     }

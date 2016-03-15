@@ -31,7 +31,7 @@ public class SleepyMovement : NetworkBehaviour {
     LocalPlayer localPlayer;
 
     [SyncVar]
-    public bool isAlive;
+    public bool isAlive = true;
 
     void Start()
     {

@@ -12,6 +12,7 @@ public class LocalPlayer : NetworkBehaviour {
 
     public GameObject winScreen;
     public GameObject loseScreen;
+    public GameObject lobbyScreen;
 
 	void Start(){
 		lobbyManager = FindObjectOfType<GuiLobbyManager> ();
@@ -19,6 +20,25 @@ public class LocalPlayer : NetworkBehaviour {
 	}
 
 	void Update(){
+
+        if(localPlayer != null)
+        {
+            if(localPlayer.tag == "Player")
+            {
+                if (localPlayer.GetComponent<SleepyMovement>().isAlive == false)
+                {
+                    localLoss(localPlayer);
+                }
+            }
+            else if(localPlayer.tag == "mosquito")
+            {
+                if (localPlayer.GetComponent<MosquitoControl>().isAlive == false)
+                {
+                    localLoss(localPlayer);
+                }
+            }
+        }
+
 		if (localPlayerChecked) 
 		{
 			return;
@@ -41,14 +61,32 @@ public class LocalPlayer : NetworkBehaviour {
         }
 	}
 
-    public void localWin()
+    public void localWin(GameObject winner)
     {
-        winScreen.SetActive(true);
+        if (winner == localPlayer)
+        {
+            winScreen.SetActive(true);
+            StartCoroutine(WaitThenStop());
+        }
     }
 
-    public void localLoss()
+    public void localLoss(GameObject loser)
     {
-        loseScreen.SetActive(true);
+        if (loser == localPlayer)
+        {
+            loseScreen.SetActive(true);
+            StartCoroutine(WaitThenStop());
+        }
     }
 
+    IEnumerator WaitThenStop()
+    {
+        FindObjectOfType<SleepyMovement>().enabled = false;
+        FindObjectOfType<MosquitoControl>().enabled = false;
+        yield return new WaitForSeconds(3);
+        lobbyManager.StopClient();
+        loseScreen.SetActive(false);
+        winScreen.SetActive(false);
+        lobbyScreen.SetActive(true);
+    }
 }
