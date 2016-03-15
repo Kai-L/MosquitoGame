@@ -3,21 +3,39 @@ using System.Collections;
 
 public class Lightswitch : MonoBehaviour {
 
-	public GameObject light;
+	public Light lightToSwitch;
 	public GameObject lightSwitch;
 	public bool lightActive;
 
-	void OnCollisionEnter(Collision c)
-	{
-		lightActive = !lightActive;
-		light.SetActive (lightActive);
-		lightSwitch.transform.Rotate(Vector3.down * Time.deltaTime, 0, 0);
-	}
+    public int yRotationAdjust;
 
-	void OnControllerColliderHit(ControllerColliderHit c)
+    bool canTurn = true;
+
+    void Start()
+    {
+        lightToSwitch.enabled = lightActive;
+    }
+
+    void OnTriggerEnter(Collider c)
 	{
-		lightActive = !lightActive;
-		light.SetActive (lightActive);
-		lightSwitch.transform.Rotate(Vector3.down * Time.deltaTime, 0, 0);
-	}
+        if (c.tag == "Player" || c.tag == "mosquito" && canTurn)
+        {
+            lightActive = !lightActive;
+            lightToSwitch.enabled = lightActive;
+            Vector3 tempRot;
+            tempRot = lightSwitch.transform.eulerAngles;
+            tempRot.x = 0;
+            tempRot.y = yRotationAdjust;
+            tempRot.z += 180;
+            lightSwitch.transform.eulerAngles = tempRot;
+            StartCoroutine(LightTimer());
+        }
+    }
+
+    IEnumerator LightTimer()
+    {
+        canTurn = false;
+        yield return new WaitForSeconds(3);
+        canTurn = true;
+    }
 }
