@@ -10,12 +10,15 @@ public class NetworkSync : NetworkBehaviour
 
 	public List<GameObject> PlayersInGame;
 
-	bool humanAdded = false;
+    LocalPlayer localPlayer;
+
+    bool humanAdded = false;
 	bool mosquitoAdded = false;
 
 	public int playersRequired = 2;
 
 	void Start(){
+        localPlayer = FindObjectOfType<LocalPlayer>();
 		StartCoroutine (CheckPlayerCount ());
 	}
 
@@ -38,6 +41,8 @@ public class NetworkSync : NetworkBehaviour
 			StartCoroutine (CheckPlayerCount ());
 		} else {
 			clock.StartCoroutine (clock.TickSecond ());
+            GameObject.Find("WaitingScreen").SetActive(false);
+            localPlayer.AllowMovement();
 		}
 	}
 

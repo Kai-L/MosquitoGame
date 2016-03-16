@@ -25,6 +25,7 @@ public class LocalPlayer : NetworkBehaviour {
         {
             if(localPlayer.tag == "Player")
             {
+                Destroy(GameObject.FindWithTag("MosquitoCam"));
                 if (localPlayer.GetComponent<SleepyMovement>().isAlive == false)
                 {
                     localLoss(localPlayer);
@@ -32,6 +33,7 @@ public class LocalPlayer : NetworkBehaviour {
             }
             else if(localPlayer.tag == "mosquito")
             {
+                Destroy(GameObject.FindWithTag("MainCamera"));
                 if (localPlayer.GetComponent<MosquitoControl>().isAlive == false)
                 {
                     localLoss(localPlayer);
@@ -88,5 +90,18 @@ public class LocalPlayer : NetworkBehaviour {
         loseScreen.SetActive(false);
         winScreen.SetActive(false);
         lobbyScreen.SetActive(true);
+    }
+
+    public void AllowMovement()
+    {
+        if (localPlayer.tag == "Player")
+        {
+            localPlayer.GetComponent<SleepyMovement>().canMove = true;
+            localPlayer.GetComponent<SleepySwat>().canSwat = true;
+        }
+        else if (localPlayer.tag == "mosquito")
+        {
+            localPlayer.GetComponent<MosquitoControl>().canMove = true;
+        }
     }
 }

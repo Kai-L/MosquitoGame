@@ -16,6 +16,8 @@ public class SleepySwat : MonoBehaviour {
 	public float cameraAngle;
 	public float setSwat;
 
+    public bool canSwat = false;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -29,6 +31,11 @@ public class SleepySwat : MonoBehaviour {
 		if (!networkIdentity.isLocalPlayer) {
 			return;
 		}
+
+        if (!canSwat)
+        {
+            return;
+        }
 
 		cameraAngle = GetComponent<RotateHead> ().xAxis;
 		if (cameraAngle > 30) {

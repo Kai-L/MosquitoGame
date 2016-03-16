@@ -4,6 +4,7 @@ using System.Collections;
 
 public class MosquitoControl : NetworkBehaviour {
 
+    public Camera cameraToDestroy;
 	Animator anim;
 
 	//int isFlying = Animator.StringToHash("isFlying");
@@ -38,6 +39,7 @@ public class MosquitoControl : NetworkBehaviour {
     public bool isAlive = true;
 
     public Transform spawnPoint;
+    public bool canMove = false;
 
     public override float GetNetworkSendInterval ()
 	{
@@ -71,9 +73,14 @@ public class MosquitoControl : NetworkBehaviour {
 
 		if (!isLocalPlayer) 
 		{
-			Destroy (mainCamera);
+			Destroy (cameraToDestroy.gameObject);
 			return;
 		}
+
+        if (!canMove)
+        {
+            return;
+        }
 
 		if (!isFlapping && usesGravity) {
 			character.Move (Vector3.down * Time.deltaTime * gravity);

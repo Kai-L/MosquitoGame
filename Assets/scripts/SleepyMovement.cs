@@ -34,6 +34,7 @@ public class SleepyMovement : NetworkBehaviour {
     public bool isAlive = true;
 
     public Transform spawnPoint;
+    public bool canMove = false;
 
     void Start()
     {
@@ -92,7 +93,12 @@ public class SleepyMovement : NetworkBehaviour {
 
 
         // Forward Movement Controls
-        Debug.Log("Vertical axis: " + Input.GetAxis("Vertical"));
+        //Debug.Log("Vertical axis: " + Input.GetAxis("Vertical"));
+        if (!canMove)
+        {
+            return;
+        }
+
         if (Input.GetAxis("Vertical") > 0)
         {
 			tempForwardSpeed = forwardMoveSpeed;
