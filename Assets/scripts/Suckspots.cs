@@ -1,16 +1,24 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class Suckspots : MonoBehaviour {
+public class Suckspots : NetworkBehaviour {
 
 	public GameObject[] suckspots;
+
+    [SyncVar]
 	public int currentSuckspot;
-	public float Timer;
+
+    [SyncVar]
+    public int seed;
+
+    public float Timer;
 
 	private float tempTimer;
 
 	void Start () 
 	{
+        Random.seed = seed;
 		SetNewSuckspot ();
 		Timer = 20F;
 		tempTimer = Timer;
