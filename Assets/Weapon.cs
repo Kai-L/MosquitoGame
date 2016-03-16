@@ -33,6 +33,7 @@ public class Weapon : MonoBehaviour {
 		if (sleepyPickup.currentObject != this) {
 			transform.parent = null;
 			GetComponent<Rigidbody> ().isKinematic = false;
+			tag = "Weapon";
 		}
 	}
 
@@ -45,6 +46,8 @@ public class Weapon : MonoBehaviour {
 		sleepyPickup.currentObject = this;
 
 		GetComponent<Rigidbody> ().isKinematic = true;
+
+		tag = "hand";
 	}
 
     public void PlaySwingSound()

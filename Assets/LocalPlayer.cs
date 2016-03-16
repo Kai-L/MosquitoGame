@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class LocalPlayer : NetworkBehaviour {
@@ -20,7 +21,6 @@ public class LocalPlayer : NetworkBehaviour {
 	}
 
 	void Update(){
-
         if(localPlayer != null)
         {
             if(localPlayer.tag == "Player")
@@ -86,15 +86,41 @@ public class LocalPlayer : NetworkBehaviour {
         loseScreen.SetActive(true);
         StartCoroutine(WaitThenStop());
     }
+		
+	public delegate void EndGameDelegate();
+
+	[SyncEvent]
+	public event EndGameDelegate EventEndGame;
+
+	[Command]
+	public void CmdDoEnd(){
+		EventEndGame ();
+	}
+
+	public void EndGame(){
+		lobbyManager.StopClient ();
+		lobbyManager.StopMatchMaker ();
+		SceneManager.LoadScene ("SwatTheBug");
+	}
+
 
     IEnumerator WaitThenStop()
     {
         FindObjectOfType<SleepyMovement>().enabled = false;
         FindObjectOfType<MosquitoControl>().enabled = false;
         yield return new WaitForSeconds(3);
-        lobbyManager.StopClient();
+        //lobbyManager.StopClient();
+		//lobbyManager.StopMatchMaker();
         loseScreen.SetActive(false);
         winScreen.SetActive(false);
+		//SceneManager.LoadScene ("SwatTheBug");
+
+		EventEndGame += EndGame;
+
+		lobbyManager.StopClient ();
+		lobbyManager.StopMatchMaker ();
+		SceneManager.LoadScene ("SwatTheBug");
+
         lobbyScreen.SetActive(true);
     }
 
