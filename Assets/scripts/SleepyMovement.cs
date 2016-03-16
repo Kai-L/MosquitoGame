@@ -33,9 +33,14 @@ public class SleepyMovement : NetworkBehaviour {
     [SyncVar]
     public bool isAlive = true;
 
+    public Transform spawnPoint;
+
     void Start()
     {
         localPlayer = FindObjectOfType<LocalPlayer>();
+
+        spawnPoint = GameObject.Find("SleepySpawn").transform;
+        transform.position = spawnPoint.position;
 
         networkIdentity = FindObjectOfType<NetworkIdentity>();
         Cursor.lockState = CursorLockMode.Locked;

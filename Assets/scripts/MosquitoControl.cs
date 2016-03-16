@@ -37,12 +37,17 @@ public class MosquitoControl : NetworkBehaviour {
     [SyncVar]
     public bool isAlive = true;
 
+    public Transform spawnPoint;
+
     public override float GetNetworkSendInterval ()
 	{
 		return 0;
 	}
 
 	void Start(){
+        spawnPoint = GameObject.Find("MosquitoSpawn").transform;
+        transform.position = spawnPoint.position;
+
         localPlayer = FindObjectOfType<LocalPlayer>();
 		character = GetComponent<CharacterController> ();
 		mainCamera = this.gameObject.transform.FindChild ("Main Camera").gameObject;
