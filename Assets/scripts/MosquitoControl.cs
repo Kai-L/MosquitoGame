@@ -30,7 +30,6 @@ public class MosquitoControl : NetworkBehaviour {
     public float xAxis;
     public float yAxis;
 
-	GameObject mainCamera;
 	CharacterController character;
 
     LocalPlayer localPlayer;
@@ -52,7 +51,6 @@ public class MosquitoControl : NetworkBehaviour {
 
         localPlayer = FindObjectOfType<LocalPlayer>();
 		character = GetComponent<CharacterController> ();
-		mainCamera = this.gameObject.transform.FindChild ("Main Camera").gameObject;
 
 		//accessing the animator
 		anim = GetComponent<Animator>();
@@ -193,7 +191,7 @@ public class MosquitoControl : NetworkBehaviour {
             GetComponent<Rigidbody>().velocity = tempVec;
         }
 
-        if(c.gameObject.tag == "hand")
+		if(c.gameObject.tag == "hand" || c.gameObject.tag == "Weapon")
         {
             isAlive = false;
             localPlayer.localLoss(this.gameObject);

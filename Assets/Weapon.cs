@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using System.Collections;
 
-public class Weapon : MonoBehaviour {
+public class Weapon : NetworkBehaviour {
 
 	public Transform snapPoint;
 	public Pickup sleepyPickup;
@@ -19,6 +20,9 @@ public class Weapon : MonoBehaviour {
 
 	LocalPlayer localPlayer;
 
+	[SyncVar]
+	public bool isPickedUp = false;
+
 	void Start(){
         audioSource = GetComponent<AudioSource>();
 		snapPoint = gameObject.transform;
@@ -26,12 +30,18 @@ public class Weapon : MonoBehaviour {
 	}
 
 	void Update(){
-		if (localPlayer.localPlayer.GetComponent<SleepyMovement>() == null) 
-		{
+		if (isPickedUp) {
+			sleepyPickup.currentObject = this;
+			GetComponent<Rigidbody> ().isKinematic = true;
+			tag = "hand";
+		}
+
+		if (localPlayer.localPlayer.GetComponent<SleepyMovement> () == null) {
 			return;
 		}
 		if (sleepyPickup.currentObject != this) {
 			transform.parent = null;
+			isPickedUp = false;
 			GetComponent<Rigidbody> ().isKinematic = false;
 			tag = "Weapon";
 		}
@@ -44,6 +54,7 @@ public class Weapon : MonoBehaviour {
 			return;
 		}
 		sleepyPickup.currentObject = this;
+		isPickedUp = true;
 
 		GetComponent<Rigidbody> ().isKinematic = true;
 

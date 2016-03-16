@@ -43,6 +43,10 @@ public class LocalPlayer : NetworkBehaviour {
 
 		if (localPlayerChecked) 
 		{
+			if (localPlayer == null)
+			{
+				WaitThenStop ();
+			}
 			return;
 		}
 
