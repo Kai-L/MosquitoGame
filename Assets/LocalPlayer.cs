@@ -81,6 +81,12 @@ public class LocalPlayer : NetworkBehaviour {
         }
     }
 
+    public void allLoss()
+    {
+        loseScreen.SetActive(true);
+        StartCoroutine(WaitThenStop());
+    }
+
     IEnumerator WaitThenStop()
     {
         FindObjectOfType<SleepyMovement>().enabled = false;

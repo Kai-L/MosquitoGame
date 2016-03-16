@@ -35,7 +35,7 @@ public class NetworkSync : NetworkBehaviour
 			mosquitoAdded = true;
 		}
 
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (0);
 
 		if (PlayersInGame.Count != playersRequired) {
 			StartCoroutine (CheckPlayerCount ());

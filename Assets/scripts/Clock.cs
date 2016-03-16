@@ -41,6 +41,7 @@ public class Clock : MonoBehaviour {
         if(currentHour == endingHour)
         {
             Debug.LogWarning("Morning Has Come");
+            FindObjectOfType<LocalPlayer>().allLoss();
             yield break;
         }
         text.text = currentHour.ToString("00") + ":" + currentMinute.ToString("00");
